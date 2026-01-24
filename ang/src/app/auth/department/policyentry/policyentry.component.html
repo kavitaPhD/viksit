@@ -1,0 +1,54 @@
+<div class="container-fluid py-4">
+    <h1 class="mb-4 text-center">Vision @2047 Dashboard</h1>
+    <div class="row mb-5">
+        <div class="col-12">
+            <form [formGroup]="trackerForm" (ngSubmit)="onSubmit()">
+                <div class="header-metadata">
+                    <h2>Vision Delivery Unit - Tracker (Agriculture & Allied)</h2>
+
+                    <div class="meta-single-row">
+                        <label>Sector Initiative:</label>
+                        <input type="text" formControlName="initiativeTitle">
+                    </div>
+
+                    <div class="metadata-grid">
+
+                        <div class="meta-item">
+                            <label>Policy Number:</label>
+                            <input type="text" formControlName="policyNumber">
+                        </div>
+
+                        <div class="meta-item">
+                            <label>Status:</label>
+                            <input type="text" formControlName="overallStatus">
+                        </div>
+
+                        <div class="meta-item">
+                            <label>Last Updated:</label>
+                            <input type="text" formControlName="lastUpdate">
+                        </div>
+
+                        <div class="meta-item">
+                            <label>Main Responsible Dept:</label>
+                            <select formControlName="mainResponsibleDept">
+                                <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                            </select>
+                        </div>
+
+                        <div class="meta-item">
+                            <label>Assisting Dept:</label>
+                            <select formControlName="assistingDept" multiple>
+                                <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                            </select>
+                        </div>
+
+                        <div class="meta-item">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit">Save Updates</button>
+            </form>
+        </div>
+    </div>
+</div>

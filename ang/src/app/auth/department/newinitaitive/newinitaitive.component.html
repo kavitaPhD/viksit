@@ -1,0 +1,108 @@
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-1">
+            <a class="back-icon-btn" [routerLink]="['/department/initiativemaster']">
+                <span class="icon">←</span> Back
+            </a>
+        </div>
+        <div class="col-md-11">
+            <h1 class="mb-4 text-center">New Initiative Entry By the <span style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> <u> " {{this.departmentname}} " </u> </span> Department</h1>
+        </div>
+    </div>
+    <form [formGroup]="initiativeentryForm" (ngSubmit)="onSubmit()">
+        <div [ngClass]="{'disabled': isDisabled}">
+            <div class="row text-center">
+                <div class="col-md-8">
+                    <mat-form-field appearance="outline" class="col-md-12">
+                        <mat-label>Enter Initiative</mat-label>
+                        <input matInput formControlName="initiative_title">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Target Year (Duration)</mat-label>
+                        <mat-select formControlName="term">
+                            <mat-option *ngFor="let term of termOptions" [value]="term">
+                                {{ term }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" *ngIf="isSaveMode" class="btn btn-custom btn-secondary btn-sm">Save</button>
+                    <button type="button" *ngIf="isEditMode" (click)="onUpdate()"
+                        class="btn btn-custom btn-secondary btn-sm">Update</button>
+                    &nbsp;
+                    <button type="button" (click)="onReset()"
+                        class="btn btn-custom btn-warning btn-sm">Reset</button>&nbsp;&nbsp;
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <div class="table-responsive" id="scrollableDiv">
+                        <div class="mat-elevation-z8" style="overflow: auto">
+                            <table mat-table [dataSource]="dataSource" #sort="matSort" matSort id="datatable">
+                                <ng-container matColumnDef="sn">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header
+                                        style="color: white;padding:10px; align-items: center;">
+                                        S.No. </th>
+                                    <td mat-cell *matCellDef="let element"
+                                        style="color: black;padding:10px; align-items: center; font-size: 14px;">
+                                        {{element.sn}}
+                                    </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="initiative_title">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header style="align-items: left;">
+                                        Scheme Type
+                                    </th>
+                                    <td mat-cell *matCellDef="let element" class="left-align">
+                                        {{ element.initiative_title }}
+                                    </td>
+                                </ng-container>
+
+                                <!-- <ng-container matColumnDef="owner_description">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner </th>
+                                    <td mat-cell *matCellDef="let element" class="text-center">
+                                        {{element.owner_description}} </td>
+                                </ng-container> -->
+
+                                <ng-container matColumnDef="term_description">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Goal (Term) </th>
+                                    <td mat-cell *matCellDef="let element" class="text-center">
+                                        {{element.term_description}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="action">
+                                    <th mat-header-cell *matHeaderCellDef>Action</th>
+                                    <td mat-cell *matCellDef="let element">
+                                        <a mat-icon-button color="primary" (click)="EditInitiative(element.initiative_id); scrollToTop(container)" title="Edit">
+                                            <mat-icon>edit</mat-icon>
+                                        </a>                                        
+                                        <a mat-icon-button color="warn" (click)="DeleteInitiative(element.initiative_id)" title="Delete">
+                                            <mat-icon>delete</mat-icon>
+                                        </a>
+                                    </td>
+                                </ng-container>
+
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                            
+                                <tr class="mat-row" *matNoDataRow>
+                                    <td class="mat-cell" colspan="4">No data matching the filter
+                                        "{{input.value}}"</td>
+                                </tr>
+                            </table>
+
+                            <mat-paginator [pageSizeOptions]="[20, 40, 80, 100]"></mat-paginator>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

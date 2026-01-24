@@ -1,0 +1,143 @@
+<div class="container-fluid py-4" style="background-color: #F9F8F6;">
+    <div class="row">
+        <div class="col-md-1">
+            <a class="back-icon-btn" [routerLink]="['/department/initiativemaster']">
+                <span class="icon">←</span> Back
+            </a>
+        </div>
+        <div class="col-md-11">
+            <h1 class="text-center">
+                Enter the Progress of KPIs for the selected Initiative for the
+                <span style="font-size: 21px; font-weight: 600; color: #8b1537;">
+                    <u>" {{ departmentname }} "</u>
+                </span>
+                Department
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3 style="font-size: 21px; font-weight: 600; color: #8b1537;">
+                Initiative : {{ selecteddinitiativename }}
+            </h3>
+        </div>
+
+        <form [formGroup]="progresstrackingForm" (ngSubmit)="onSubmit()" class="form-container">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h4 style="color: #8b1537;">
+                        Total KPIs: {{ kpidata.length }}
+                    </h4>
+                </div>
+
+                <div class="col-md-12">
+                    <div *ngFor="let kpi of kpidata; let i = index">
+                        <div class="mega-goal-section">
+                            <br>
+
+                            <table class="goal-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:25%;">KPI / Department</th>
+                                        <th style="width:20%; text-align:center;">Status</th>
+                                        <th style="width:30%; text-align:center;">Progress Details</th>
+                                        <th style="width:15%; text-align:center;">Date & Time</th>
+                                        <th style="width:10%; text-align:center;">Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- KPI ROW -->
+                                    <tr>
+                                        <td>{{ i + 1 }}. {{ kpi.kpi_name }}</td>
+
+                                        <td>
+                                            <label class="me-2">
+                                                <input type="radio" [name]="'kpi_status_' + i" value="Started">
+                                                Started
+                                            </label>
+                                            <label class="me-2">
+                                                <input type="radio" [name]="'kpi_status_' + i" value="On Track">
+                                                On Track
+                                            </label>
+                                            <label class="me-2">
+                                                <input type="radio" [name]="'kpi_status_' + i" value="Delayed">
+                                                Delayed
+                                            </label>
+                                            <label>
+                                                <input type="radio" [name]="'kpi_status_' + i" value="Completed">
+                                                Completed
+                                            </label>
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                                                <input type="month" class="form-control form-control-sm"
+                                                    style="width:140px">
+
+                                                <input type="number" class="form-control form-control-sm"
+                                                    style="width:90px" placeholder="%" min="0" max="100">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <input type="datetime-local" class="form-control form-control-sm">
+                                        </td>
+
+                                        <!-- ENTER BUTTON -->
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-sm btn-primary">
+                                                Enter
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <!-- DEPARTMENT ROW -->
+                                    <tr *ngFor="let dept of kpi.departmentData; let j = index">
+                                        <td>{{ dept?.deptname_en }}</td>
+
+                                        <td>
+                                            <label class="me-2">
+                                                <input type="radio" [name]="'dept_status_' + i + '_' + j"
+                                                    value="Pending">
+                                                Pending
+                                            </label>
+                                            <label>
+                                                <input type="radio" [name]="'dept_status_' + i + '_' + j"
+                                                    value="Completed">
+                                                Completed
+                                            </label>
+                                        </td>
+
+                                        <td>
+                                            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                                                <input type="month" class="form-control form-control-sm"
+                                                    style="width:140px">
+
+                                                <input type="number" class="form-control form-control-sm"
+                                                    style="width:90px" placeholder="%" min="0" max="100">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <input type="datetime-local" class="form-control form-control-sm">
+                                        </td>
+
+                                        <!-- ENTER BUTTON -->
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-sm btn-success">
+                                                Enter
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

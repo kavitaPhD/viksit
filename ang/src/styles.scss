@@ -1,0 +1,13 @@
+ html,
+ body {
+     font-family: "Josefin Sans", sans-serif;
+ }
+
+ *:not(i):not(.material-icons):not(.fa):not(.fas):not(.fa-solid):not(.fa-regular):not(.fa-brands):not(.bi) {
+     font-family: "Josefin Sans", sans-serif;
+ }
+
+ .mat-icon-button .mat-icon {
+     font-size: 22px;
+     line-height: 22px;
+ }

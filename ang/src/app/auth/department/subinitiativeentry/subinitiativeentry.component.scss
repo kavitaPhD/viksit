@@ -1,0 +1,77 @@
+.initiative-block {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.sub-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.sub-grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.sub-grid-row input,
+.sub-grid-row select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.add-btn,
+.remove-btn,
+.submit-btn {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: #dc3545;
+    grid-column: span 1;
+}
+
+.add-btn:hover,
+.submit-btn:hover,
+.remove-btn:hover {
+    opacity: 0.9;
+}
+
+.add-metric-btn {
+    background-color: #81c784;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin-top: 5px;
+    display: block;
+    /* Important for alignment */
+    width: 100%;
+}
+
+.remove-metric-btn {
+    background-color: #ff9494;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    width: 30px;
+}
+
+.remove-metric-btn:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+    color: #a0a0a0;
+}

@@ -1,0 +1,32 @@
+<div class="container-fluid px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-2">
+        <h2 class="fw-bold text-center mb-2">
+            Chhattisgarh Anjor Vision @ 2047 - Theme-wise Initiatives
+        </h2>
+        <div *ngFor="let group of themeGroups" class="mb-2">
+            <div class="p-2 text-white fw-bold rounded mb-3 text-center" [style.background]="group.color">
+                {{ group.title }}
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                <div class="col" *ngFor="let t of group.themes; let i = index">
+                    <button class="card theme-card h-100 text-start border-0 shadow-sm" type="button"
+                        (click)="onSelect(t)" data-bs-toggle="modal" data-bs-target="#departments">
+                        <div class="card-body d-flex gap-3 align-items-start">
+                            <div class="theme-icon text-white d-flex align-items-center justify-content-center rounded-3 me-2"
+                                [ngClass]="t.colorClass || 'bg-secondary'">
+                                {{ t.initials }}
+                            </div>
+                            <div class="flex-grow-1">
+                                <h3 class="card-title mb-1 fw-semibold">{{ t.title }}</h3>
+                                <h4 class="card-text small text-muted mb-0">{{ t.desc }}</h4>
+                            </div>
+                            <span class="position-absolute top-0 end-0 badge bg-dark p-2">
+                                {{ i + 1 }}
+                            </span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

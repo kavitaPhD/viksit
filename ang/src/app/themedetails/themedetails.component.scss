@@ -1,0 +1,137 @@
+///////////////
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #fff;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: #8b1537;
+    color: #ffffff;
+}
+
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+th {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+td:first-child {
+    text-align: center;
+    font-weight: 500;
+    color: black;
+}
+
+td:nth-child(2) {
+    text-align: left;
+    color: black;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.back-icon-btn {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #88AB8E;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-icon-btn:hover {
+    background-color: #88AB8E;
+    color: white;
+}
+
+////////////////////////////////////
+
+
+
+/* --- Progress Bar Styling (Copied from previous requests) --- */
+.split-visual {
+    display: flex;
+    height: 8px;
+    /* Slightly smaller for table cell */
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.completed-short {
+    background-color: #4CAF50;
+    min-width: 1px;
+}
+
+/* Green */
+.completed-mid {
+    background-color: #2196F3;
+    min-width: 1px;
+}
+
+/* Blue */
+.completed-long {
+    background-color: #FF9800;
+    min-width: 1px;
+}
+
+/* Orange */
+
+.remaining {
+    background-color: #ddd;
+    min-width: 1px;
+}
+
+/* Ensure the total column width is adjusted */
+.progress-cell {
+    width: 150px;
+    /* Width for the bar and text */
+    padding: 2px !important;
+}
+
+.progress-text {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #4CAF50;
+    /* Base color for completed text */
+    margin-bottom: 2px;
+    display: block;
+}

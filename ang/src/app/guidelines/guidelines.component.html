@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div class="container py-5">
+    <h2 class="fw-bold text-center mb-5">
+        Chhattisgarh Anjor Vision @ 2047 - Download
+    </h2>
+    <div class="row g-4 justify-content-center">
+        <!-- English Card -->
+        <div class="col-md-5">
+            <div class="card shadow-sm custom-card text-center">
+                <img class="card-img-top bg-image img-fluid mx-auto d-block" src="assets/img/AnjorEnglish.png"
+                    alt="Chhattisgarh Vision English" style="height: 220px; object-fit: contain; padding: 15px;" />
+                <div class="card-body">
+                    <p class="card-text fw-semibold">
+                        Chhattisgarh Anjor Vision @2047 (English)
+                    </p>
+                    <button class="btn btn-primary w-100" (click)="downloadEnglishPDF()">
+                        Download
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Hindi Card -->
+        <div class="col-md-5">
+            <div class="card shadow-sm custom-card text-center">
+                <img class="card-img-top bg-image img-fluid mx-auto d-block" src="assets/img/AnjorHindi.png"
+                    alt="Chhattisgarh Vision Hindi" style="height: 220px; object-fit: contain; padding: 15px;" />
+                <div class="card-body">
+                    <p class="card-text fw-semibold">
+                        Chhattisgarh Anjor Vision @2047 (Hindi)
+                    </p>
+                    <button class="btn btn-primary w-100" (click)="downloadHindiPDF()">
+                        Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

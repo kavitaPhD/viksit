@@ -1,0 +1,86 @@
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-md-1">
+            <a class="back-icon-btn" [routerLink]="['/department/initiativemaster']">
+                <span class="icon">←</span> Back
+            </a>
+        </div>
+        <div class="col-md-11">
+            <h1 class="mb-4 text-center">Scheme Master Entry By Department</h1>
+        </div>
+    </div>
+    
+    <form [formGroup]="schemesmasterForm" (ngSubmit)="onSubmit()">
+        <div [ngClass]="{'disabled': isDisabled}">
+            <div class="row text-center">
+                <div class="col-md-8">
+                    <mat-form-field appearance="outline" class="col-md-12">
+                        <mat-label>Enter Scheme Name</mat-label>
+                        <input matInput formControlName="schemename">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-form-field appearance="outline" class="col-md-12">
+                        <mat-label>Scheme Type </mat-label>
+                        <mat-select formControlName="scheme_type" required #scheme_type>
+                            <mat-option value="State">State</mat-option>
+                            <mat-option value="Central">Central</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" *ngIf="isSaveMode" class="btn btn-custom btn-secondary btn-sm">Save</button>
+                    <button type="button" *ngIf="isEditMode" (click)="onUpdate()" class="btn btn-custom btn-secondary btn-sm">Update</button>
+                    &nbsp;
+                    <button type="button" (click)="onReset()" class="btn btn-custom btn-warning btn-sm">Reset</button>&nbsp;&nbsp;
+                </div>
+            </div>           
+
+            <div class="row mt-3 text-center">
+                <div class="col-md-12">
+                    <div class="table-responsive" id="scrollableDiv">
+                        <div class="mat-elevation-z8" style="overflow: auto">
+                            <table mat-table [dataSource]="dataSource" #sort="matSort" matSort id="datatable">
+                                <ng-container matColumnDef="sn">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header style="border: 1px solid #69899F;color: white;padding:10px; align-items: center;">
+                                        S.No. </th>
+                                    <td mat-cell *matCellDef="let element"
+                                        style="border: 1px solid #69899F;color: black;padding:10px; align-items: center; font-size: 14px;"> {{element.sn}}
+                                    </td>
+                                </ng-container>
+                                
+                                <ng-container matColumnDef="scheme_type">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header style="align-items: center;">Scheme Type
+                                    </th>
+                                    <td mat-cell *matCellDef="let element"> {{element.scheme_type}} </td>
+                                </ng-container>
+                
+                                                            
+                
+                                <ng-container matColumnDef="schemename">
+                                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Scheme (योजना) </th>
+                                    <td mat-cell *matCellDef="let element" class="text-center">
+                                        {{element.schemename}} </td>
+                                </ng-container>    
+                
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                                
+                                <!-- Row shown when there is no matching data. -->
+                                <tr class="mat-row" *matNoDataRow>
+                                    <td class="mat-cell" colspan="4">No data matching the filter
+                                        "{{input.value}}"</td>
+                                </tr>
+                                </table>
+                                
+                                <mat-paginator [pageSizeOptions]="[20, 40, 80, 100]"></mat-paginator>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

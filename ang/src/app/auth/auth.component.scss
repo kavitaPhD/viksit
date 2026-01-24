@@ -1,0 +1,147 @@
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+mat-toolbar {
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
+
+    &.topbar {
+        padding: 0px 15px;
+    }
+
+    .navbar-header {
+        text-align: center;
+
+        .navbar-brand {
+            display: flex;
+            line-height: 18px;
+            align-items: center;
+
+            .dark-logo {
+                display: none;
+            }
+
+            b {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .profile-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+}
+
+.topbar {
+    position: relative;
+    z-index: 2;
+}
+
+.example-sidenav-container {
+    flex: 1 0 auto;
+}
+
+.mat-drawer {
+    background-color: #FFAC00;
+    color: rgba(17, 0, 0, 0.87);
+}
+
+/* Nav List Links */
+.mat-nav-list a {
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.mat-nav-list .active a {
+    background-color: #211806;
+    color: #fff;
+}
+
+/* Optional: To make the entire list item respond to hover/focus */
+.mat-nav-list .active {
+    background-color: #211806;
+}
+
+/* Optional: If you only want the text/icon inside the <a> tag to be white */
+.mat-nav-list .active a span,
+.mat-nav-list .active a mat-icon {
+    color: #fff !important;
+}
+
+/* ======================= */
+/* Expansion Panels */
+/* ======================= */
+.mat-expansion-panel {
+    background: linear-gradient(to right, #FFAC00, #FFAC00);
+    color: #fff;
+    border-radius: 0;
+}
+
+.mat-expansion-panel-header {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.mat-expansion-panel-header-description,
+.mat-expansion-indicator::after {
+    color: #000000 !important;
+}
+
+/* ======================= */
+/* Material Icons */
+/* ======================= */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    color: #000000;
+}
+
+/* ======================= */
+/* Mat Toolbar Theme */
+/* ======================= */
+.mat-toolbar.mat-primary {
+    background-image: linear-gradient(to right, #FFAC00, #FFAC00);
+    color: #fff;
+}
+
+/* ======================= */
+/* Sorting & Tables */
+/* ======================= */
+.mat-sort-header-arrow {
+    color: #ffffff;
+}
+
+.mat-sort-header-stem {
+    background: #ffffff;
+    height: 10px;
+    width: 2px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline__leading,
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline__notch,
+::ng-deep .mat-mdc-form-field:hover .mdc-notched-outline__trailing {
+    border-color: #222 !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline__leading,
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline__notch,
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline__trailing {
+    border-color: #000 !important;
+}

@@ -1,0 +1,119 @@
+ body {
+     background-color: #f9f4e9;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .vision-card {
+     background-color: #2d6044;
+     border-radius: 25px;
+     padding: 3rem;
+     color: #fff;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .vision-card h2 {
+     color: #fdbb2d;
+     font-weight: 700;
+ }
+
+ .vision-card p {
+     color: #e6e6e6;
+     font-size: 0.95rem;
+     line-height: 1.6;
+ }
+
+ .vision-card .btn-know-more {
+     background-color: #39b54a;
+     border-radius: 50px;
+     padding: 0.5rem 1.5rem;
+     color: #fff;
+     font-weight: 600;
+     text-decoration: none;
+ }
+
+ .vision-card .btn-know-more:hover {
+     background-color: #2fa93e;
+ }
+
+ .leader-img {
+     width: 100%;
+     max-width: 220px;
+     border-radius: 15px;
+ }
+
+ .icon-row {
+     position: absolute;
+     top: -30px;
+     left: 30px;
+ }
+
+ .icon-row img {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     border: 3px solid #fff;
+     margin-right: 10px;
+ }
+
+ .illustration-img {
+     max-width: 500px;
+     width: 100%;
+ }
+
+ @media (max-width: 992px) {
+     .vision-card {
+         text-align: center;
+     }
+
+     .icon-row {
+         position: relative;
+         top: 0;
+         left: 0;
+         margin-bottom: 1rem;
+     }
+ }
+
+ .heading-tight {
+     margin-bottom: 3px;
+ }
+
+ .subheading-tight {
+     margin-top: 0;
+ }
+
+ .section-main {
+     font-weight: 700;
+     border-bottom: 3px solid #0d6efd;
+     display: inline-block;
+     padding-bottom: 6px;
+ }
+
+ .info-card {
+     width: 150px;
+     min-height: 120px;
+     background: #fff;
+     border-radius: 6px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     padding: 5px 5px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .info-card mat-icon {
+     font-size: 36px;
+     color: #FFAC00;
+     margin-bottom: 10px;
+ }
+
+ .info-card p {
+     font-size: 15px;
+     font-weight: 500;
+     color: #333;
+     margin: 0;
+ }
+
+ .info-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+ }

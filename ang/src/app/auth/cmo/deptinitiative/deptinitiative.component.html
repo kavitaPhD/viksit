@@ -1,0 +1,77 @@
+<div class="container-fluid px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-2">
+        <h2 class="fw-bold text-center mb-2">
+            Chhattisgarh Anjor@2047 - Department-wise (Short-Term (Year-2030)) Progress
+        </h2>
+        <form [formGroup]="departmentwiseprogress" class="form-container">
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped align-middle text-center">            
+                            <thead>
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Department</th>
+                                    <th>Short Term (2030)<br> Total Initiative</th>
+                                    <th>Short Term (2030)<br> Completed Initiative</th>
+                                    <th class="progress-cell">Completed (2030)</th>
+                                </tr>
+                            </thead>            
+                            <tbody>
+                                <tr *ngFor="let dept of departmentwiseinitiativelist; let i = index">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>
+                                        <a [routerLink]="['/cmo/deptinitiativedetails']" [queryParams]="{ deptId: dept.dept_id }" style="color: rgb(9, 5, 250);">
+                                            {{ dept.dept_name }}
+                                        </a>
+                                    </td>
+                                    <td>{{ dept.dept_count }}</td>
+                                    <td>{{ dept.dept_completed }}</td>
+
+                                    <td class="progress-cell">
+                                        <span class="progress-text">
+                                            {{ dept.dept_completed }} / {{ dept.dept_count }}
+                                            ({{ getPercentage(dept.dept_completed, dept.dept_count) }}%)
+                                        </span>
+            
+                                        <div class="split-visual"
+                                            [attr.aria-label]="'Short Term Progress: ' + dept.dept_completed + ' out of ' + dept.dept_count">
+            
+                                            <div class="completed-short" [style.flex]="dept.dept_completed"
+                                                [title]="dept.dept_completed + ' Completed'">
+                                            </div>
+            
+                                            <div class="remaining" [style.flex]="dept.dept_count - dept.dept_completed"
+                                                [title]="(dept.dept_count - dept.dept_completed) + ' Remaining'">
+                                            </div>
+            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-dark text-center" style="font-weight: bold; color: white;">
+                                    <td colspan="2" style="font-weight: bold; color: white;">Grand Total</td>
+                                
+                                    <td class="text-center" style="font-weight: bold; color: white;">{{ getTotalCount() }}</td>
+                                    <td class="text-center" style="font-weight: bold; color: white;">{{ getTotalCompleted() }}</td>
+                                
+                                    <td class="progress-cell text-center">
+                                        <span class="progress-text">
+                                            {{ getTotalCompleted() }} / {{ getTotalCount() }}
+                                            ({{ getPercentage(getTotalCompleted(), getTotalCount()) }}%)
+                                        </span>
+                                
+                                        <div class="split-visual text-center">
+                                            <div class="completed-short" [style.flex]="getTotalCompleted()"></div>
+                                            <div class="remaining" [style.flex]="getTotalCount() - getTotalCompleted()"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,223 @@
+<div class="container-fluid py-4">
+    <h1 class="mb-4 text-center">Update Initiative Master Entry for the <span style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> <u> " {{this.departmentname}} " </u> </span> Department</h1>
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <form [formGroup]="initiativesmasterForm" (ngSubmit)="onSubmit()">
+                <div [ngClass]="{ 'disabled': isDisabled }">
+                    <!--   <div class="row mb-3">
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Select Initiative</mat-label>
+                                <mat-select formControlName="initiative_id" (selectionChange)="onInitiativeSelected($event)">
+                                    <mat-option [value]="0"> -- Select Initiative -- </mat-option>
+                                    <mat-option *ngFor="let i of initiativesdata" [value]="i.initiative_id">
+                                        {{ i.initiative_title }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Selected Initiative</mat-label>
+                                <input matInput formControlName="initiative_name" readonly>
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-2 d-flex align-items-center">
+                            <a [routerLink]="['/department/newinitiative']" class="btn btn-primary btn-sm w-100">
+                                <i class="fa fa-upload"></i> Add New/Edit Initiative
+                            </a>
+                        </div>
+                    </div>            
+                  <div class="row mb-3">
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Select Allied Department</mat-label>
+                                <mat-select formControlName="allied_department_id"
+                                    (selectionChange)="onAlliedDepartmentSelected($event)">
+                                    <mat-option [value]="0"> -- Select Allied Department -- </mat-option>
+                                    <mat-option *ngFor="let i of allieddept" [value]="i.dept_id">
+                                        {{ i.dept_name }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Select Allied Scheme</mat-label>
+                                <mat-select formControlName="allied_scheme_id" (selectionChange)="onAlliedSchemeSelected($event)">
+                                    <mat-option [value]="0"> -- Select Allied Scheme -- </mat-option>
+                                    <mat-option *ngFor="let i of schemedata" [value]="i.scheme_id">
+                                        {{ i.schemename }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-2 d-flex align-items-center">
+                            <a [routerLink]="['/department/schememaster']" class="btn btn-primary btn-sm w-100">
+                                <i class="fa fa-upload"></i> Add New/Edit Scheme
+                            </a>
+                        </div>
+                    </div>     
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Potential Risk</mat-label>
+                                <textarea matInput rows="3" formControlName="potential_risk"></textarea>
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-6">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Risk Mitigation</mat-label>
+                                <textarea matInput rows="3" formControlName="risk_mitigation"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>      
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Total Funding Risk</mat-label>
+                                <span matPrefix>₹&nbsp;</span>
+                                <input matInput type="text" formControlName="total_funding_risk">
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Funding Request This Year</mat-label>
+                                <span matPrefix>₹&nbsp;</span>
+                                <input matInput type="text" formControlName="funding_request_this_year">
+                            </mat-form-field>
+                        </div>            
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Funding Source</mat-label>
+                                <input matInput formControlName="funding_source">
+                            </mat-form-field>
+                        </div>
+                    </div>    
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Status</mat-label>
+                                <mat-select formControlName="status">
+                                    <mat-option *ngFor="let status of statusOptions" [value]="status">
+                                        {{ status }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <mat-form-field appearance="outline" class="w-100">
+                                <mat-label>Target Year (Duration)</mat-label>
+                                <mat-select formControlName="target_year_duration">
+                                    <mat-option *ngFor="let term of termOptions" [value]="term">
+                                        {{ term }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>  
+                    <div class="row mb-3">
+                        <div class="col-md-3">
+                            <button type="submit" [disabled]="initiativesmasterForm.invalid"
+                                class="btn btn-secondary btn-sm w-100">Save Details</button>
+                        </div>
+                        <div class="col-md-9"></div>
+                    </div> -->
+
+                    <div class="row mt-3 text-center">
+                        <div class="col-md-12">
+                            <div class="table-responsive" id="scrollableDiv">
+                                <div class="mat-elevation-z8" style="overflow: auto">
+                                    <table mat-table [dataSource]="dataSource" #sort="matSort" matSort id="datatable">
+                                        <ng-container matColumnDef="sn">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header
+                                                style="color: white;padding:10px; align-items: center;">
+                                                S.No. </th>
+                                            <td mat-cell *matCellDef="let element"
+                                                style="color: black;padding:10px; align-items: center; font-size: 14px;">
+                                                {{element.sn}}
+                                            </td>
+                                        </ng-container>
+                    
+                                        <ng-container matColumnDef="initiative_title">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header style="align-items: center;">
+                                                Initiatives
+                                            </th>
+                                            <td mat-cell *matCellDef="let element"> {{element.initiative_title}} </td>
+                                        </ng-container>                   
+                    
+                    
+                                        <!-- <ng-container matColumnDef="owner_description">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner </th>
+                                            <td mat-cell *matCellDef="let element" class="text-center">
+                                                {{element.owner_description}} </td>
+                                        </ng-container> -->
+                    
+                                        <ng-container matColumnDef="term_description">
+                                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Goal (Term) </th>
+                                            <td mat-cell *matCellDef="let element" class="text-center">
+                                                {{element.term_description}} </td>
+                                        </ng-container>
+                    
+                                        <ng-container matColumnDef="action">
+                                            <th mat-header-cell *matHeaderCellDef>Add/Edit Initaitive</th>
+                                            <td mat-cell *matCellDef="let element" class="text-center">
+                                                <a mat-icon-button color="primary"
+                                                    [routerLink]="['/department/newinitiative']" title="Edit">
+                                                    <mat-icon>edit</mat-icon>
+                                                </a>
+                                                <!-- <a mat-icon-button color="warn" (click)="DeleteInitiative(element.initiative_id)"
+                                                    title="Delete">
+                                                    <mat-icon>delete</mat-icon>
+                                                </a> -->
+                                            </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="kpiaddition">
+                                            <th mat-header-cell *matHeaderCellDef>KPI Addition</th>
+                                            <td mat-cell *matCellDef="let element" class="text-center">
+                                                <a mat-icon-button [routerLink]="['/department/addkpi', element.initiative_id]" color="primary" title="Add">
+                                                    <mat-icon>add</mat-icon>
+                                                </a>
+                                            </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="kpiprogressenter">
+                                            <th mat-header-cell *matHeaderCellDef>Progress Enter</th>
+                                            <td mat-cell *matCellDef="let element" class="text-center">
+                                                <a mat-icon-button [routerLink]="['/department/progresstracking', element.initiative_id]" color="primary"
+                                                    title="Progress Enter">
+                                                    <mat-icon>add_chart</mat-icon>
+                                                </a>
+                                            </td>
+                                        </ng-container>
+
+                                        <ng-container matColumnDef="kpiprogress">
+                                            <th mat-header-cell *matHeaderCellDef>Progress Tracking</th>
+                                            <td mat-cell *matCellDef="let element" class="text-center">
+                                                <a mat-icon-button [routerLink]="['//department/schemeentry', element.initiative_id]" color="primary" title="Progress">
+                                                    <mat-icon>trending_up</mat-icon>
+                                                </a>
+                                            </td>
+                                        </ng-container>
+                    
+                                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    
+                                        <tr class="mat-row" *matNoDataRow>
+                                            <td class="mat-cell" colspan="4">No data matching the filter
+                                                "{{input.value}}"</td>
+                                        </tr>
+                                    </table>
+                    
+                                    <mat-paginator [pageSizeOptions]="[40, 80, 120, 200]"></mat-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>

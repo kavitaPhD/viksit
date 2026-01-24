@@ -1,0 +1,78 @@
+<div class="container-fluid py-4">
+    <h1 class="mb-4 text-center">Vision @2047 Sub-Initiative Entry</h1>
+
+    <form [formGroup]="initiativesForm" (ngSubmit)="submit()">
+        <div formArrayName="initiatives">
+
+            <div *ngFor="let initiative of initiativesArray.controls; let i = index" [formGroupName]="i"
+                class="initiative-block">
+
+                <h2>{{ initiative.value.initiativeTitle }}</h2>
+                <p>
+                    <strong>Department:</strong> {{ initiative.value.department }} |
+                    <strong>Agency:</strong> {{ initiative.value.agency }} |
+                    <strong>Type:</strong> {{ initiative.value.type }} |
+                    <strong>Target Year:</strong> {{ initiative.value.targetYear }}
+                </p>
+
+                <div formArrayName="subInitiatives" class="sub-grid">
+
+                    <div *ngFor="let sub of getSubInitiatives(i).controls; let j = index" [formGroupName]="j"
+                        class="sub-grid-row">
+
+                        <input formControlName="subInitiativeName" placeholder="Sub Initiative Name" />
+                        <input formControlName="schemeName" placeholder="Scheme Name" />
+                        <input formControlName="allieddepartment" placeholder="Allied Department" />
+
+                        <div formArrayName="metrics" class="metrics-array-container">
+                            <label>Metrics:</label>
+                            <div *ngFor="let metricGroup of getMetricsArray(i, j).controls; let k = index"
+                                [formGroupName]="k" class="metric-input-group">
+
+                                <div class="metric-input-fields">
+                                    <input formControlName="metricName" placeholder="Metric Description" />
+                                    <input formControlName="unit" placeholder="Unit (e.g., % / Hectares)"
+                                        class="unit-input" />
+                                </div>
+
+                                <button type="button" class="remove-metric-btn" (click)="removeMetric(i, j, k)"
+                                    [disabled]="getMetricsArray(i, j).length === 1">
+                                    -
+                                </button>
+                            </div>
+                            <button type="button" class="add-metric-btn" (click)="addMetric(i, j)">
+                                + Add Metric with Unit
+                            </button>
+                        </div>
+                        <input formControlName="potentialRisk" placeholder="Potential Risk" />
+                        <input formControlName="riskMitigation" placeholder="Risk Mitigation" />
+                        <input formControlName="totalFundingRequest" placeholder="Total Funding Request" />
+                        <input formControlName="fundingRequestCurrentYear" placeholder="Funding Request This Year" />
+                        <input formControlName="fundingSource" placeholder="Funding Source" />
+                        <input type="date" formControlName="targetDateOfCompletion" />
+
+                        <select formControlName="completionStatus">
+                            <option value="">Select Status</option>
+                            <option value="Not Started">Not Started</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+
+                        <button type="button" class="remove-btn" (click)="removeSubInitiative(i, j)">
+                            Remove Sub-Initiative
+                        </button>
+                    </div>
+
+                </div>
+
+                <button type="button" class="add-btn" (click)="addSubInitiative(i)">
+                    + Add Sub Initiative
+                </button>
+
+                <hr />
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>

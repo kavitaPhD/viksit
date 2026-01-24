@@ -1,0 +1,27 @@
+.footer {
+    background-color: #0d2137;
+    color: #ccc;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-square mat-icon {
+    color: #fff;
+    font-size: 20px;
+}
+
+.footer mat-icon.text-primary {
+    color: #0d6efd !important;
+    vertical-align: middle;
+}

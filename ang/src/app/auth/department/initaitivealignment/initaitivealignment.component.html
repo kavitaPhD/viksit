@@ -1,0 +1,48 @@
+<div class="container-fluid py-4">
+    <h1 class="mb-4 text-center">Initiative Alignment By the <span style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> {{this.departmentname}} </span> Department</h1>
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <form [formGroup]="initiativesalignForm">            
+                <table class="table table-bordered" id="datatable">
+                    <thead>
+                        <tr>
+                            <th>SN</th>
+                            <th>Initiative Title</th>
+                            <th>Short Term <br> 2030 </th>
+                            <th>Mid Term <br> 2035 </th>
+                            <th>Long Term <br> 2047 </th>
+                            <th>Department</th>
+                            <th>Agency</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody formArrayName="initiatives">
+            
+                        <tr *ngFor="let initiativeGroup of initiativesArray.controls; let i = index" [formGroupName]="i">
+                            <td>{{ initiativeGroup.value.sn }}</td>            
+                            <td class="text-start">
+                                {{ initiativeGroup.value.initiativeTitle }}
+                            </td>            
+                            <td>
+                                <input type="radio" formControlName="targetYear" value="S">
+                            </td>
+                            <td>
+                                <input type="radio" formControlName="targetYear" value="M">
+                            </td>
+                            <td>
+                                <input type="radio" formControlName="targetYear" value="L">
+                            </td>            
+                            <td>{{ initiativeGroup.value.department }}</td>
+                            <td>{{ initiativeGroup.value.agency }}</td>
+                            <td>{{ initiativeGroup.value.type }}</td>            
+                        </tr>            
+                    </tbody>
+                </table>             
+            </form>
+        </div>
+        <div class="col-md-12">
+            <button type="submit"  class="btn btn-custom btn-secondary btn-sm" [disabled]="initiativesalignForm.invalid">Save Initiatives</button>
+        </div>
+    </div>
+</div>

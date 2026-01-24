@@ -1,0 +1,339 @@
+/* =====================================================
+   BASE LAYOUT & TYPOGRAPHY
+===================================================== */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 500 !important;
+    color: #333;
+}
+
+h3,
+h4,
+h5 {
+    font-weight: 500;
+    color: #444;
+}
+
+/* =====================================================
+   HEADER / NAV
+===================================================== */
+.back-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    color: #8b1537;
+    text-decoration: none;
+}
+
+.back-icon-btn .icon {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.back-icon-btn:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card-summary {
+    background-color: #EFE9E3;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.card-summary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card-value {
+    font-size: 34px;
+    font-weight: 700;
+    color: #8b1537;
+}
+
+.card-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+.form-container {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* =====================================================
+   TABLE STYLING (KPI / INITIATIVE)
+===================================================== */
+.initiative-table,
+.goal-table {
+    width: max-content !important;
+    table-layout: auto !important;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.initiative-table thead,
+.goal-table thead {
+    background-color: #8b1537;
+    color: #fff;
+}
+
+.initiative-table th,
+.initiative-table td,
+.goal-table th,
+.goal-table td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    font-size: 14px;
+    white-space: wrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.initiative-table tbody tr:nth-child(even),
+.goal-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.initiative-table tbody tr:hover,
+.goal-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* KPI MAIN ROW */
+.goal-table tbody tr:first-child {
+    background-color: #fff5f8;
+    font-weight: 500;
+}
+
+/* =====================================================
+   COLUMN SIZING
+===================================================== */
+.sn-col {
+    width: 50px;
+}
+
+.title-col {
+    width: 650px;
+    text-align: left !important;
+}
+
+/* =====================================================
+   INPUTS & CONTROLS
+===================================================== */
+.form-control-sm,
+.form-select-sm {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+}
+
+.form-control-sm:focus,
+.form-select-sm:focus {
+    border-color: #8b1537;
+    box-shadow: 0 0 0 2px rgba(139, 21, 55, 0.2);
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+input[type="number"],
+input[type="month"],
+input[type="datetime-local"] {
+    text-align: center;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 6px 14px;
+}
+
+.btn-primary {
+    background-color: #8b1537;
+    border-color: #8b1537;
+}
+
+.btn-primary:hover {
+    background-color: #6f102c;
+    border-color: #6f102c;
+}
+
+.btn-success {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* =====================================================
+   STATUS COLORS
+===================================================== */
+.status-col {
+    font-weight: 600;
+}
+
+.status-completed {
+    color: #4CAF50;
+}
+
+.status-progress {
+    color: #2196F3;
+}
+
+.status-delayed {
+    color: #dc3545;
+}
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+.progress {
+    height: 18px;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+}
+
+.progress-bar {
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   RECENT UPDATES
+===================================================== */
+.list-group-item {
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* =====================================================
+   SECTION SPACING
+===================================================== */
+.mega-goal-section {
+    margin-bottom: 40px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 992px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .initiative-table th,
+    .initiative-table td,
+    .goal-table th,
+    .goal-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+body {
+    background-color: #F9F8F6;
+}
+
+.card-header {
+    background-color: #8b1537;
+    color: #fff;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.status-started {
+    background-color: #ff6f61;
+}
+
+.status-ontrack {
+    background-color: #007bff;
+}
+
+.status-delayed {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.status-completed {
+    background-color: #28a745;
+}
+
+.back-icon-btn {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #88AB8E;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-icon-btn:hover {
+    background-color: #88AB8E;
+    color: white;
+}

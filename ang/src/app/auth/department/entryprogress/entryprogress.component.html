@@ -1,0 +1,176 @@
+<div class="container-fluid py-4 tracker-dashboard">
+    <h1 class="mb-4 text-center">Vision @2047 Progress Entry</h1>
+    <div class="row mb-5">
+        <div class="col-12">
+            <form [formGroup]="trackerForm" (ngSubmit)="onSubmit()">
+                <!-- <div class="header-metadata">
+                    <h2>Vision Delivery Unit - Tracker (Agriculture & Allied)</h2>
+
+                    <div class="meta-single-row">
+                        <label>Sector Initiative:</label>
+                        <input type="text" formControlName="initiativeTitle"
+                            value="Agriculture & allied Vision (30 Initiatives)" readonly>
+                    </div>
+
+                    <div class="metadata-grid">
+                        <div class="meta-item">
+                            <label>Policy Number:</label>
+                            <input type="text" formControlName="policyNumber" readonly>
+                        </div>
+                        <div class="meta-item">
+                            <label>Status:</label>
+                            <input type="text" formControlName="overallStatus" readonly>
+                        </div>
+                        <div class="meta-item">
+                            <label>Last Updated:</label>
+                            <input type="text" formControlName="lastUpdate" readonly>
+                        </div>
+
+                        <div class="meta-item">
+                            <label>Main Responsible Dept:</label>
+                            <select formControlName="mainResponsibleDept">
+                                <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                            </select>
+                        </div>
+                        <div class="meta-item">
+                            <label>Assisting Dept:</label>
+                            <select formControlName="assistingDept">
+                                <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                            </select>
+                        </div>
+                        <div class="meta-item"></div>
+                    </div>
+                </div>
+                <hr> -->
+                <!-- <div class="mega-goal-section">
+                    <h3>Mega Goal (Agriculture Targets)</h3>
+                    <table class="goal-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="4">Current Status</th>
+                                <th colspan="4">Target Achieved</th>
+                            </tr>
+                            <tr>
+                                <th>Agriculture Target Area</th>
+                                <th>Status Label</th>
+                                <th>2030</th>
+                                <th>2035</th>
+                                <th>2047</th>
+                                <th>Status Label</th>
+                                <th>2030</th>
+                                <th>2035</th>
+                                <th>2047</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr formGroupName="megaGoalCurrent">
+                                <td>Participation Added (Current Status)</td>
+                                <td>{{ trackerForm.get('megaGoalCurrent.statusLabel')?.value }}</td>
+                                <td><input type="checkbox" formControlName="target2030"></td>
+                                <td><input type="checkbox" formControlName="target2035"></td>
+                                <td><input type="checkbox" formControlName="target2047"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr formGroupName="megaGoalAchieved">
+                                <td>Participation Added (Target Achieved)</td>
+                                <td>{{ trackerForm.get('megaGoalAchieved.statusLabel')?.value }}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>{{ trackerForm.get('megaGoalAchieved.statusLabel')?.value }}</td>
+                                <td><input type="checkbox" formControlName="target2030"></td>
+                                <td><input type="checkbox" formControlName="target2035"></td>
+                                <td><input type="checkbox" formControlName="target2047"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr> -->
+
+                <div class="initiative-tracking-section">
+                    <!-- <h3>30 Sector Initiatives (Supportive Tasks)</h3> -->
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>S.N.</th>
+                                <th class="text-start">Task Description</th>
+                                <th>Primary Owner</th>
+                                <th>Secondary Owner</th>
+                                <th>Current Status</th>
+                                <th>Dependency Indicator</th>
+                            </tr>
+                        </thead>
+                        <tbody formArrayName="initiativeTracking">
+                            <tr *ngFor="let rowGroup of initiativeTrackingArray.controls; let i = index"
+                                [formGroupName]="i">
+                                <td>{{ rowGroup.get('sn')?.value }}</td>
+                                <td class="text-start">{{ rowGroup.get('initiativeTitle')?.value }}</td>
+                                <td>
+                                    <select formControlName="responsibleDept">
+                                        <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select formControlName="secondResponsible">
+                                        <option value="">None</option>
+                                        <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select formControlName="currentStatus">
+                                        <option *ngFor="let status of currentStatuses" [value]="status">{{ status }}
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select formControlName="dependencyIndicator">
+                                        <option value="Completed">Completed</option>
+                                        <option value="Pending">Pending</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr>
+
+                <div class="risk-mitigation-section">
+                    <h3>Major Risks and Dependencies</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>S.N.</th>
+                                <th class="text-start">Risk Detail</th>
+                                <th>Risk Level</th>
+                                <th>Mitigation Plan</th>
+                            </tr>
+                        </thead>
+                        <tbody formArrayName="riskMitigation">
+                            <tr *ngFor="let rowGroup of riskMitigationArray.controls; let i = index"
+                                [formGroupName]="i">
+                                <td>{{ rowGroup.get('sn')?.value }}</td>
+                                <td class="text-start">{{ rowGroup.get('riskDetail')?.value }}</td>
+                                <td>
+                                    <select formControlName="riskLevel">
+                                        <option *ngFor="let level of riskLevels" [value]="level">{{ level }}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" formControlName="mitigationPlan">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button type="submit" [disabled]="trackerForm.invalid">Submit Tracker</button>
+            </form>
+        </div>
+    </div>
+</div>

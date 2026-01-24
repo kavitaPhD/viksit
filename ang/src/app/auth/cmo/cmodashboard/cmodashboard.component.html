@@ -1,0 +1,35 @@
+<div class="container-fluid px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-2">
+        <h2 class="fw-bold text-center mb-2">
+            Chhattisgarh Anjor@2047 - Department-wise (Short Term (Year 2030) Progress) Progress
+        </h2> 
+        <form [formGroup]="cmodashboard" class="form-container">
+            <div class="row g-3">
+                <div class="col-md-4" *ngFor="let dept of departmentwiseinitiativelist">            
+                    <div class="progress-card">            
+                        <div class="department-title">
+                            {{ dept.dept_name }}
+                        </div>            
+                        <div class="split-bar">            
+                            <div class="split-top">
+                                <strong>Short Term Tasks (Completed / Total)</strong>
+                                <div class="small muted">
+                                    {{ dept.dept_completed }} / {{ dept.dept_count }}
+                                    • {{ getPercentage(dept.dept_completed, dept.dept_count) }}%
+                                </div>
+                            </div>            
+                            <div class="split-visual">
+                                <div class="completed" [style.flex]="dept.dept_completed"
+                                    [title]="dept.dept_completed + ' completed'">
+                                </div>            
+                                <div class="remaining" [style.flex]="dept.dept_count - dept.dept_completed"
+                                    [title]="(dept.dept_count - dept.dept_completed) + ' remaining'">
+                                </div>
+                            </div>            
+                        </div>
+                    </div>            
+                </div>
+            </div>           
+        </form>
+    </div>
+</div>

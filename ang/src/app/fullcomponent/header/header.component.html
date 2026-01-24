@@ -1,0 +1,85 @@
+<div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+    <div class="row align-items-center h-100">
+        <div class="col-lg-6 text-center text-lg-start">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="assets/img/cglogo.png" alt="CG Logo" style="height:50px; margin-right:10px;">
+                <div>
+                    <h2 class="display-15 text-primary m-0">Chhattisgarh Anjor@2047 Pragati Portal</h2>
+                    <h2 class="display-12 m-0 text-secondary text-white" style="font-size:12px;">Rajya NITI Aayog,
+                        Chhattisgarh</h2>
+                </div>
+            </a>
+        </div>      
+        <div class="col-lg-6 d-none d-lg-block">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="flex-shrink-0 btn-square bg-primary d-flex justify-content-center align-items-center"
+                            style="width: 40px; height: 40px; border-radius: 4px;">
+                            <mat-icon class="text-dark">call</mat-icon>
+                        </div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Call Us</h6>
+                            <span class="text-white">0771-2511223</span>
+                        </div>
+                    </div>
+                </div>            
+                <div class="col-lg-6">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="flex-shrink-0 btn-square bg-primary d-flex justify-content-center align-items-center"
+                            style="width: 40px; height: 40px; border-radius: 4px;">
+                            <mat-icon class="text-dark">mail_outline</mat-icon>
+                        </div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Mail Us</h6>
+                            <span class="text-white">ms-niti[at]cg.gov.in</span>
+                        </div>
+                    </div>
+                </div>            
+                <!-- <div class="col-lg-4">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="flex-shrink-0 btn-square bg-primary d-flex justify-content-center align-items-center"
+                            style="width: 40px; height: 40px; border-radius: 4px;">
+                            <mat-icon class="text-dark">location_on</mat-icon>
+                        </div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Address</h6>
+                            <span class="text-white">123 Street, NY, USA</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+            <h4 class="d-lg-none m-0">Menu</h4>
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a [routerLink]="['/about']" class="nav-item nav-link">About</a>
+                    <a [routerLink]="['/download']" class="nav-item nav-link">Downloads</a>
+                    <a [routerLink]="['/gallery']" class="nav-item nav-link">Photo Gallery</a>
+                    <div class="nav-item dropdown">
+                        <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Guidelines</a>
+                        <div class="dropdown-menu bg-light m-0">
+                            <a [routerLink]="['/guidelines']" class="dropdown-item">Anjor Vision @2047</a>
+                        </div>
+                    </div>
+                    <a [routerLink]="['/contactus']" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="d-flex ms-auto">
+                    <a class="btn btn-secondary d-flex align-items-center py-2 px-4" [routerLink]="['/login']">
+                        <mat-icon class="me-1" style="font-size: 18px; vertical-align: middle;">login</mat-icon> LOGIN
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

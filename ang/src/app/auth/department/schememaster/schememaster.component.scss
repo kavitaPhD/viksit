@@ -1,0 +1,146 @@
+/* Table Wrapper */
+#scrollableDiv {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #c8d1dc;
+    /* soft gray */
+    border-radius: 6px;
+}
+
+/* Entire Table */
+table[mat-table] {
+    background-color: #ffffff !important;
+    color: #000 !important;
+    width: 100%;
+}
+
+/* Header Row */
+.mat-header-cell {
+    background-color: #8b1537;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #c8d1dc !important;
+    padding: 14px 10px !important;
+    /* improved padding */
+    text-align: center !important;
+    /* centered text */
+}
+
+/* Sort Arrow */
+.mat-sort-header-arrow {
+    color: #000 !important;
+}
+
+/* Body Rows */
+.mat-row {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e4e9f0 !important;
+    /* soft gray */
+}
+
+/* Table Cells */
+.mat-cell {
+    color: #000 !important;
+    border: 1px solid #c8d1dc !important;
+    padding: 12px 10px !important;
+    /* balanced padding */
+    font-size: 14px !important;
+    text-align: center !important;
+    /* align center */
+}
+
+/* First column left aligned */
+.mat-cell:first-child,
+.mat-header-cell:first-child {
+    text-align: center !important;
+    font-weight: 500;
+}
+
+/* Second column or text-specific */
+.text-start {
+    text-align: left !important;
+}
+
+/* Hover effect */
+.mat-row:hover {
+    background-color: #ffe7d1 !important;
+    /* soft pastel peach */
+}
+
+/* No Data Row */
+.mat-no-data-row .mat-cell {
+    text-align: center;
+    padding: 20px;
+    color: #666 !important;
+    background-color: #f6f9fc !important;
+    /* soft cloudy background */
+    border: none !important;
+}
+
+/* Paginator */
+.mat-paginator {
+    background-color: #e6dbff !important;
+    /* pastel lavender */
+    color: #000 !important;
+    border-top: 1px solid #c8d1dc;
+}
+
+.mat-paginator .mat-select-value {
+    color: #000 !important;
+}
+
+.mat-paginator .mat-paginator-icon {
+    fill: #000 !important;
+}
+
+/* Outline Form Field Styles */
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-color: #555 !important;
+    /* dark outline */
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    border-color: #333 !important;
+}
+
+.mat-form-field-appearance-outline:hover .mat-form-field-outline-start,
+.mat-form-field-appearance-outline:hover .mat-form-field-outline-end {
+    border-color: #444 !important;
+}
+
+/* Label */
+.mat-form-field-label {
+    color: #000 !important;
+}
+
+/* Input text */
+.mat-input-element {
+    color: #000 !important;
+}
+
+/* Select arrow */
+.mat-select-arrow {
+    color: #000 !important;
+}
+
+/* Back Button */
+.back-icon-btn {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #88AB8E;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-icon-btn:hover {
+    background-color: #88AB8E;
+    color: white;
+}

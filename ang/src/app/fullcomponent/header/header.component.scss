@@ -1,0 +1,17 @@
+.navbar .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 15px 0;
+    font-size: 15px;
+    outline: none;
+}
+
+/* Fix Bootstrap dropdown caret hidden by Material or resets */
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: 0.25em;
+    content: "";
+    border-top: 0.4em solid;
+    border-right: 0.4em solid transparent;
+    border-left: 0.4em solid transparent;
+}

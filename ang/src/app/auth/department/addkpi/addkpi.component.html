@@ -1,0 +1,319 @@
+<div class="container-fluid py-4" style="background-color: #F9F8F6;">
+    <div class="row">
+        <div class="col-md-1">
+            <a class="back-icon-btn" [routerLink]="['/department/initiativemaster']">
+                <span class="icon">←</span> Back
+            </a>
+        </div>
+        <div class="col-md-11">
+        <h1 class=" text-center">Add KPIs for the selected Initiative for the <span
+                style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> <u> " {{this.departmentname}} " </u> </span>
+            Department</h1>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-12">
+            <h3 style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;">
+                Initiative : {{this.selecteddinitiativename}}
+            </h3>
+        </div>
+        <form [formGroup]="kpiForm" (ngSubmit)="onSubmit()" class="form-container">         
+            <div class="row ">
+                <div class="col-md-8">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <mat-label>Select KPI Category </mat-label> <br>
+                            <mat-radio-group formControlName="kpi_cat" (change)="onChangeKPICat($event)" appearance="outline">
+                                <mat-radio-button value="New" [checked]="isCheckedN">New KPI</mat-radio-button>&nbsp;
+                                <mat-radio-button value="SDG" [checked]="isCheckedS">SDG KPI</mat-radio-button> &nbsp;
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <br>
+                            <div *ngIf="sdgarea">
+                                <div class="row ">
+                                    <div class="col-md-12">
+                                        <mat-form-field appearance="outline" class="full-width col-md-12">
+                                            <mat-label>SDG Indicators</mat-label>
+                                            <mat-select formControlName="sdg_indicator" (selectionChange)="onSDGIndicator($event)">
+                                                <mat-option [value]="0"> -- Select SDG Indicators --
+                                                </mat-option>
+                                                <mat-option *ngFor="let type of sdgdata" [value]="type.indicator_id">
+                                                    {{ type.indicator_desc }}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="newarea">                                
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Enter KPI</mat-label>
+                                <input matInput formControlName="kpi_name">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row ">  
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Enter Scheme</mat-label>                        
+                                <mat-select formControlName="scheme" multiple (selectionChange)="onSchemeSelected($event)">  
+                                    <mat-option [value]="0" disabled>
+                                        -- Select Scheme --
+                                    </mat-option>
+                                    <mat-option *ngFor="let type of schemedata" [value]="type.id">
+                                        {{ type.scheme_name }}
+                                    </mat-option>                        
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Type of KPI</mat-label>
+                                <mat-select formControlName="kpi_type" (selectionChange)="onkpi_typeSelected($event)">
+                                    <mat-option [value]="0"> -- Select Type of KPI --
+                                    </mat-option>
+                                    <mat-option *ngFor="let type of kpiTypes" [value]="type">
+                                        {{ type }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>                        
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Target Goal (Terms)</mat-label>
+                                <mat-select formControlName="target_goal_term">
+                                    <mat-option [value]="0"> --  Select Target Goal (Terms) --
+                                    </mat-option>
+                                    <mat-option *ngFor="let type of goalTerm" [value]="type">
+                                        {{ type }}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Target Value</mat-label>
+                                <input matInput type="number" formControlName="target_value">
+                            </mat-form-field>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Target Accomplishment Date</mat-label>
+                                <input matInput [matDatepicker]="picker" formControlName="target_accomplishment_date">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Unit of Meauserment</mat-label>
+                                <input matInput formControlName="unit_of_measurement">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Data Source</mat-label>
+                                <input matInput formControlName="data_source">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Numerator</mat-label>
+                                <input matInput formControlName="numerator">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Denominator</mat-label>
+                                <input matInput formControlName="denominator">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field appearance="outline" class="full-width col-md-12">
+                                <mat-label>Allied Department</mat-label>                            
+                                <mat-select formControlName="allieddepartment" multiple (selectionChange)="onAlliedDepartmentSelected($event)">
+                                    <mat-option [value]="0" disabled>
+                                        -- Allied Department --
+                                    </mat-option>                            
+                                    <mat-option *ngFor="let d of departmentlist" [value]="d.dept_id">
+                                        {{ d.deptname_en }}
+                                    </mat-option>                            
+                                    <mat-option [value]="100">Other</mat-option>                            
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <div *ngIf="otherdept" class="col-md-12">
+                                <mat-form-field class="col-md-12" appearance="outline">
+                                    <mat-label> Other Department <span class="required"></span> </mat-label>
+                                    <input matInput formControlName="otherallieddepartment" #othercategory>                                    
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <h2 class="heading-primary">Suggestive KPIs</h2>
+                            <table class="table-responsive kpi-table" id="datatable">
+                                <tr>
+                                    <th>Suggestive KPI</th>
+                                    <th>KPI Type</th>
+                                </tr>
+                                <tr *ngFor="let d of suggestivekpi;">
+                                    <td>{{ d.kpi_description }}</td>
+                                    <td>{{ d.kpi_type }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <h2 class="heading-secondary">SDG Suggestive KPIs</h2>
+                            <table class="table-responsive kpi-table" id="datatable">
+                                <tr>
+                                    <th>Suggestive KPI</th>                                    
+                                </tr>                            
+                                <tr *ngFor="let d of sdgdata;">
+                                    <td>
+                                        <a href="#" (click)="showSDGDetails(d.indicator_id); $event.preventDefault()" class="sdg-link">
+                                            {{ d?.indicator_desc }}
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" *ngIf="isSaveMode" class="btn btn-custom btn-secondary btn-sm">Save</button>
+                    <button type="button" *ngIf="isEditMode" (click)="onUpdate()"
+                        class="btn btn-custom btn-secondary btn-sm">Update</button>
+                    &nbsp;
+                    <button type="button" (click)="onReset()" class="btn btn-custom btn-warning btn-sm">Reset</button>&nbsp;&nbsp;
+                </div>
+            </div>            
+        </form>    
+    </div>
+    <div class="row mt-3 text-center">
+        <div class="col-md-12">
+            <div class="table-responsive" id="scrollableDiv">
+                <div class="mat-elevation-z8" style="overflow: auto">
+                    <table mat-table [dataSource]="dataSource" #sort="matSort" matSort id="datatable">
+                        <ng-container matColumnDef="sn">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header
+                                style="color: white;padding:10px; align-items: center;">
+                                S.No. </th>
+                            <td mat-cell *matCellDef="let element"
+                                style="color: black;padding:10px; align-items: center; font-size: 14px;">
+                                {{element.sn}}
+                            </td>
+                        </ng-container>
+    
+                        <ng-container matColumnDef="kpi_name">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header style="align-items: center;">
+                                KPI
+                            </th>
+                            <td mat-cell *matCellDef="let element"> {{element.kpi_name}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="kpi_type">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Type of KPI </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.kpi_type}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="target_goal_term">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Target Goal (Term) </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{
+                                element.target_goal_term === 'S'
+                                ? 'Short Term (2030)'
+                                : element.target_goal_term === 'M'
+                                ? 'Mid Term (2035)'
+                                : element.target_goal_term === 'L'
+                                ? 'Long Term (2047)'
+                                : element.target_goal_term
+                                }}
+                            </td>
+                        </ng-container>
+
+
+                        <ng-container matColumnDef="target_value">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Target Value </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.target_value}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="target_accomplishment_date">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Target Accomplishment Date </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.target_accomplishment_date | date
+                                :'mediumDate' }} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="unit_of_measurement">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Unit of Measurement </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.unit_of_measurement}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="data_source">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Source </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.data_source}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="numerator">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Numerator </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.numerator}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="denominator">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Denominator </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.denominator}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="allieddepartment">
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header> Allied Department </th>
+                            <td mat-cell *matCellDef="let element" class="text-center">
+                                {{element.deptname_en}}  {{element.otherallieddepartment}} </td>
+                        </ng-container>                            
+    
+                        <ng-container matColumnDef="action">
+                            <th mat-header-cell *matHeaderCellDef> Edit KPI </th>
+                            <td mat-cell *matCellDef="let element">
+                                <a mat-icon-button color="primary" (click)="EditKPI(element.kpi_id)"
+                                    title="Edit">
+                                    <mat-icon>edit</mat-icon>
+                                </a>
+                                <a mat-icon-button color="warn" (click)="DeleteKPI(element.kpi_id)"
+                                    title="Delete">
+                                    <mat-icon>delete</mat-icon>
+                                </a>
+                            </td>
+                        </ng-container>  
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>   
+                       
+                    </table>
+    
+                    <mat-paginator [pageSizeOptions]="[20, 40, 80, 100]"></mat-paginator>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+<form [formGroup]="statusForm" (ngSubmit)="onSubmit()" class="container">
+
+    <!-- Header Info -->
+    <h2>Project Information</h2>
+    <div class="form-grid">
+        <label>Project Name:</label>
+        <input formControlName="projectName" />
+
+        <label>Work ID:</label>
+        <input formControlName="workId" />
+
+        <label>Location / Situation:</label>
+        <input formControlName="location" />
+
+        <label>Last Updated On:</label>
+        <input type="date" formControlName="lastUpdated" />
+    </div>
+
+
+    <!-- Department Info -->
+    <h3>Department Details</h3>
+    <div class="form-grid">
+        <label>Main Department:</label>
+        <input formControlName="mainDepartment" />
+
+        <label>Supervising Officer:</label>
+        <input formControlName="supervisingOfficer" />
+
+        <label>Supporting Department:</label>
+        <input formControlName="supportingDept" />
+
+        <label>District:</label>
+        <input formControlName="district" />
+    </div>
+
+
+    <!-- Timeline -->
+    <h3>Target Year</h3>
+    <div class="timeline">
+        <label><input type="radio" value="current" formControlName="targetYear" /> Current</label>
+        <label><input type="radio" value="2030" formControlName="targetYear" /> 2030</label>
+        <label><input type="radio" value="2035" formControlName="targetYear" /> 2035</label>
+        <label><input type="radio" value="2047" formControlName="targetYear" /> 2047</label>
+    </div>
+
+
+    <!-- Task Tracker Table -->
+    <h3>Task Tracker</h3>
+
+    <table class="table" formArrayName="taskTracker">
+        <thead>
+            <tr>
+                <th>Task Description</th>
+                <th>Responsible Dept</th>
+                <th>Assisting Dept</th>
+                <th>Current Status</th>
+                <th>Status Indicator</th>
+                <th>Remarks</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let row of taskTracker.controls; let i = index" [formGroupName]="i">
+                <td><input formControlName="taskDescription"></td>
+                <td><input formControlName="responsibleDept"></td>
+                <td><input formControlName="assistingDept"></td>
+                <td><input formControlName="currentStatus"></td>
+                <td><input formControlName="statusIndicator"></td>
+                <td><input formControlName="remarks"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" (click)="addTaskRow()">+ Add Task</button>
+
+
+    <!-- Checkpoints Section -->
+    <h3>Key Checkpoints & Monitoring</h3>
+
+    <table class="table" formArrayName="checkpoints">
+        <thead>
+            <tr>
+                <th>Checkpoint</th>
+                <th>Planned Date</th>
+                <th>Actual Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let chk of checkpoints.controls; let j = index" [formGroupName]="j">
+                <td><input formControlName="checkpointName"></td>
+                <td><input type="date" formControlName="plannedDate"></td>
+                <td><input type="date" formControlName="actualDate"></td>
+                <td><input formControlName="status"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" (click)="addCheckpointRow()">+ Add Checkpoint</button>
+
+    <!-- Submit -->
+    <br /><br />
+    <button type="submit" [disabled]="statusForm.invalid">Submit</button>
+
+</form>

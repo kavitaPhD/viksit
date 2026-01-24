@@ -1,0 +1,18 @@
+.custom-card {
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-text {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.bg-image {
+    border-bottom: 1px solid #f0f0f0;
+}

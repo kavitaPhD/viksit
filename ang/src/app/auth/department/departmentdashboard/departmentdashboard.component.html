@@ -1,0 +1,57 @@
+<div class="container-fluid py-4">  
+    <h1 class="mb-4 text-center">Vision @2047 Dashboard for the <span style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> <u> " {{this.departmentname}} " </u> </span> Department</h1>
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="summary-cards">
+                <div class="card-summary card-1" style="background-color: #EFE9E3;">
+                    <div class="card-value">{{this.totalinitiative}}</div>
+                    <div class="card-label" style="color: #000000;">Total Initiatives</div>
+                </div>
+                <div class="card-summary card-2" style="background-color: #EFE9E3;">
+                    <div class="card-value">0</div>
+                    <div class="card-label" style="color: #000000;">Completed (0%)</div>
+                </div>
+                <div class="card-summary card-3" style="background-color: #EFE9E3;">
+                    <div class="card-value">0</div>
+                    <div class="card-label" style="color: #000000;">In Progress (0%)</div>
+                </div>
+                <!-- <div class="card-summary card-4" style="background-color: #EFE9E3;">
+                    <div class="card-value">0</div>
+                    <div class="card-label" style="color: #000000;">Delayed (0%)</div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-body p-0">
+                    <table class="initiative-table">
+                        <thead>
+                            <tr>
+                                <th class="sn-col" rowspan="2">S.No.</th>
+                                <th class="title-col" rowspan="2">Initiatives</th>
+                                <th rowspan="2">Goal (Term) </th>                   
+                                <th colspan="3">Status</th>
+                            </tr>
+                            <tr>
+                                <th class="status-col">Completed</th>
+                                <th class="status-col">In Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let d of initiativedetails;let i = index">
+                                <td class="sn-col">{{i+1}}</td>
+                                <td class="title-col text-start">{{d.initiative_title}}</td>
+                                <td>{{d.term_description}}</td>                               
+                                <td class="status-col">No</td>
+                                <td class="status-col ">Yes</td>                               
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

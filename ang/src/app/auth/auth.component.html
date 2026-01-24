@@ -1,0 +1,154 @@
+<div class="main-container">
+    <mat-toolbar class="topbar telative" style="background-color: #FFAC00;">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <b>
+                    <img src="assets/img/cglogo.png" alt="homepage" class="light-logo" style="width: 50px;">
+                </b>
+                <span fxShow="false" fxShow.gt-xs>
+                    <h2 style="color:#000000;; font-size: 14px;" class="light-logo">
+                        Vision @2047 Dashboard
+                    </h2>
+                </span>
+            </a>
+        </div>
+        <button mat-icon-button (click)="snav.toggle()" value="sidebarclosed">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span fxFlex> </span>
+        <span style="flex: 1 1 auto;"></span>
+        <!-- <div id="profileImage" [matMenuTriggerFor]="profile" style="font-size: 12px; color: rgb(250, 250, 251);">
+               Logout
+            </div> -->
+        <br>
+        <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-10"> <mat-icon
+                style="color: rgb(0, 0, 0);">exit_to_app</mat-icon> </button>
+        <mat-menu #profile="matMenu" class="mymegamenu">
+            <button mat-menu-item (click)="logout()">
+                <mat-icon style="color: blue;">exit_to_app</mat-icon>Logout
+            </button>
+        </mat-menu>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'"
+            fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches">
+            <mat-nav-list appAccordion>
+                <mat-list-item appAccordionLink *ngFor="let menuitem of menuItems" routerLinkActive="active"
+                    group="{{menuitem.state}}">
+                    <a class="" appAccordionToggle [routerLink]="[menuitem.state]" *ngIf="menuitem.type === 'link'">
+                        <mat-icon>{{ menuitem.icon }}</mat-icon>
+                        <span>{{ menuitem.name }}</span>
+                        <span fxFlex></span>
+                        <span class="label label-{{ badge.type }}" *ngFor="let badge of menuitem.badge">{{ badge.value
+                            }}</span>
+                    </a>
+                </mat-list-item>
+                <!-- <mat-expansion-panel [class.mat-elevation-z0]="true" appAccordionLink>
+                    <mat-expansion-panel-header>
+                        <mat-icon>description</mat-icon>
+                        <span>Planning</span>
+                        <span fxFlex></span>
+                    </mat-expansion-panel-header>
+                    <mat-nav-list>
+                        <a mat-list-item [routerLink]="['/planning/sectordashboard']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Sector Dashboard </span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/planning/sdgdistrict']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>SDG District Index</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/planning/sdgblock']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>SDG Block Index</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/planning/infrastructuregap']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Infrastructure Gap</span>
+                        </a>
+                         <a mat-list-item [routerLink]="['/planning/gatishakti']" routerLinkActive="active">
+                                <mat-icon>arrow_right</mat-icon>
+                                <span>GATI Shakti</span>
+                            </a> 
+                        <a mat-list-item href="https://pmgatishakti.gov.in/pmgatishakti/login" target="_blank"
+                            rel="noopener noreferrer">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>GATI Shakti</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/planning/districtinvestmentprofile']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>District Investment Profile</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/planning/schemeengine']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Scheme Discovery Engine</span>
+                        </a>
+                    </mat-nav-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel [class.mat-elevation-z0]="true" routerLinkActive="active" appAccordionLink>
+                    <mat-expansion-panel-header>
+                        <mat-icon>donut_small</mat-icon>
+                        <span>Monitoring</span>
+                        <span fxFlex></span>
+                    </mat-expansion-panel-header>
+                    <mat-nav-list>
+                        <a mat-list-item [routerLink]="['/monitoring/deptdashboard']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Department Dashboard(MPR)</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/monitoring/topproject']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Top Key Projects</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/monitoring/topscheme']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Top Key Schemes</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/monitoring/topindicator']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Top Key Indicators</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/monitoring/topinvestment']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Top Key Investments</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/monitoring/budgettracker']" routerLinkActive="active">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Budget Tracker</span>
+                        </a>
+                    </mat-nav-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel [class.mat-elevation-z0]="true" routerLinkActive="active" appAccordionLink>
+                    <mat-expansion-panel-header>
+                        <mat-icon>subject</mat-icon>
+                        <span>Others</span>
+                        <span fxFlex></span>
+                    </mat-expansion-panel-header>
+                    <mat-nav-list>
+                        <a mat-list-item [routerLink]="['/other/others']">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Efficiency Enhancement Tools</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/other/learningtool']">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>Learning Management System</span>
+                        </a>
+                        <a mat-list-item [routerLink]="['/other/districtmanual']">
+                            <mat-icon>arrow_right</mat-icon>
+                            <span>District Manual</span>
+                        </a>
+                    </mat-nav-list>
+                </mat-expansion-panel> -->
+            </mat-nav-list>
+        </mat-sidenav>
+    
+        <mat-sidenav-content class="page-wrapper">
+            <div class="page-content">
+                <router-outlet>
+                  
+                </router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,66 @@
+/* Styling for the main container and component */
+#b-homedb {
+    background-color: #f4f7f6;
+    /* Light background for contrast */
+}
+
+/* Style for icons */
+.card-icon {
+    height: 25px;
+    width: 25px;
+}
+
+/* Style for the main card */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Style for the card header */
+.card-header {
+    padding: 1rem 1.5rem;
+    background-color: #e9ecef;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Style for the Address Title Block card */
+.address-title-card {
+    background-color: #f8f9fa;
+    /* Lighter background */
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.address-title-card h3 {
+    color: #3f51b5;
+    /* Highlight title color */
+    font-weight: 600;
+}
+
+/* Style for the detailed address block */
+.address-details {
+    padding: 15px 0;
+}
+
+.address-details strong {
+    color: #333;
+    font-weight: 700;
+    display: inline-block;
+    min-width: 80px;
+    /* Optional: Aligns text slightly better */
+}
+
+.address-details address {
+    font-style: normal;
+    /* Removes default italic style for address tag */
+    line-height: 1.6;
+    margin-left: 80px;
+    /* Aligns the address lines under the label */
+    margin-top: -24px;
+    /* Move up to align with the strong tag */
+}
+
+.address-details p {
+    margin-bottom: 0.5rem;
+}

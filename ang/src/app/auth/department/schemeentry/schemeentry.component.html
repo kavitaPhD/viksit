@@ -1,0 +1,257 @@
+<div class="container-fluid py-4" style="background-color: #F9F8F6;">
+    <div class="row">
+        <div class="col-md-1">
+            <a class="back-icon-btn" [routerLink]="['/department/initiativemaster']">
+                <span class="icon">←</span> Back
+            </a>
+        </div>
+        <div class="col-md-11">
+            <h1 class="text-center">
+                Track Progress of KPIs for the selected Initiative for the
+                <span style="font-size: 21px; font-weight: 600; color: #8b1537;">
+                    <u>" {{ departmentname }} "</u>
+                </span>
+                Department
+            </h1>
+        </div>
+    </div>
+    <div class="row mb-4 align-items-left">
+        <div class="col-md-8">
+            <h3 style="font-size: 21px; font-weight: 600; color: #8b1537;">
+                Initiative : {{ selecteddinitiativename }}
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <!-- <label class="form-label fw-semibold">Select Month & Year</label> -->
+            <input type="month" class="form-control" value="2026-01">
+        </div>
+    </div>
+
+        <!-- KPI Cards -->
+        <div class="row">
+            <!-- KPI Card -->
+            <div class="col-md-12">
+                <!-- Example for each KPI -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        1. Annadaata to Urjadaata: Biofuel Programme launched
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-md-3">
+                                Status: <span class="status-badge status-ontrack">On Track</span>
+                            </div>
+                            <div class="col-md-3">
+                                Last Updated: 2026-01-20 10:00
+                            </div>
+                            <div class="col-md-6">
+                                Overall Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 70%;">70%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Department-wise Progress -->
+                        <div class="row mt-3">
+                            <div class="col-md-3"><strong>Animal Husbandry</strong></div>
+                            <div class="col-md-3">Status: <span class="status-badge status-completed">Completed</span>
+                            </div>
+                            <div class="col-md-3">Month: 2026-01</div>
+                            <div class="col-md-3">
+                                Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-md-3"><strong>Energy Department</strong></div>
+                            <div class="col-md-3">Status: <span class="status-badge status-started">Pending</span></div>
+                            <div class="col-md-3">Month: 2026-01</div>
+                            <div class="col-md-3">
+                                Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;">40%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI 2 -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        2. Volume of biomass/feedstock procured for biofuel production
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-md-3">
+                                Status: <span class="status-badge status-completed">Completed</span>
+                            </div>
+                            <div class="col-md-3">
+                                Last Updated: 2026-01-18 14:30
+                            </div>
+                            <div class="col-md-6">
+                                Overall Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-3"><strong>Animal Husbandry</strong></div>
+                            <div class="col-md-3">Status: <span class="status-badge status-completed">Completed</span>
+                            </div>
+                            <div class="col-md-3">Month: 2026-01</div>
+                            <div class="col-md-3">
+                                Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI 3 -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        3. Total capacity (MW/Liters) of biofuel produced under the program
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-md-3">
+                                Status: <span class="status-badge status-started">Started</span>
+                            </div>
+                            <div class="col-md-3">
+                                Last Updated: 2026-01-21 09:15
+                            </div>
+                            <div class="col-md-6">
+                                Overall Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;">30%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-3"><strong>Energy Department</strong></div>
+                            <div class="col-md-3">Status: <span class="status-badge status-started">Started</span></div>
+                            <div class="col-md-3">Month: 2026-01</div>
+                            <div class="col-md-3">
+                                Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;">30%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- <div class="container-fluid py-4" style="background-color: #F9F8F6;">
+    
+        <div class="row mb-4">
+            <div class="col-md-1">
+                <a class="back-icon-btn" [routerLink]="['/department/initiativemaster']">
+                    <span class="icon">←</span> Back
+                </a>
+            </div>
+            <div class="col-md-11">
+                <h1 class="text-center">
+                    Track Progress of KPIs for the selected Initiative for the
+                    <span style="font-size: 21px; font-weight: 600; color: #8b1537;">
+                        <u>" {{ departmentname }} "</u>
+                    </span>
+                    Department
+                </h1>
+            </div>
+        </div>
+    
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h3 style="font-size: 21px; font-weight: 600; color: #8b1537;">
+                    Initiative : {{ selecteddinitiativename }}
+                </h3>
+                <h4 style="color: #8b1537;">Total KPIs: {{ kpidata.length }}</h4>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12" *ngFor="let kpi of kpidata; let i = index">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        {{ i + 1 }}. {{ kpi.kpi_name }}
+                    </div>
+                    <div class="card-body">
+    
+                        <div class="row mb-3">
+                            <div class="col-md-3">
+                                Status:
+                                <span class="badge bg-primary">{{ kpi.kpi_status || 'Not Started' }}</span>
+                            </div>
+                            <div class="col-md-3">
+                                Last Updated: {{ kpi.lastUpdated || '---' }}
+                            </div>
+                            <div class="col-md-6">
+                                Overall Progress:
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar"
+                                        [style.width.%]="kpi.progress || 0">
+                                        {{ kpi.progress || 0 }}%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div *ngFor="let dept of kpi.departmentData; let j = index" class="row mb-2 align-items-center">
+                            <div class="col-md-3"><strong>{{ dept?.deptname_en }}</strong></div>
+                            <div class="col-md-2">
+                                Status:
+                                <span class="badge" [ngClass]="{
+                    'bg-warning': dept.status === 'Pending',
+                    'bg-success': dept.status === 'Completed'
+                  }">{{ dept.status || 'Pending' }}</span>
+                            </div>
+                            <div class="col-md-2">
+                                Month: {{ dept.month || '---' }}
+                            </div>
+                            <div class="col-md-3">
+                                Progress:
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" [style.width.%]="dept.progress || 0"
+                                        [ngClass]="{
+                           'bg-success': dept.progress >= 75,
+                           'bg-warning': dept.progress > 0 && dept.progress < 75,
+                           'bg-danger': dept.progress === 0
+                         }">
+                                        {{ dept.progress || 0 }}%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <button type="button" mat-icon-button color="primary" title="Enter Progress">
+                                    <mat-icon>check_circle</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div> -->

@@ -1,0 +1,123 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+#datatable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: auto;
+    color: black;
+    font-size: 13px;
+}
+
+#datatable td,
+#datatable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#datatable tr:nth-child(even) {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+#datatable tr:hover {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+}
+
+#datatable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #8b1537;
+    color: white;
+}
+
+.card-header {
+    background-color: #393939;
+    color: white;
+}
+
+h1,
+h2 {
+    font-weight: 400 !important;
+    color: #333;
+}
+
+.back-icon-btn {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #88AB8E;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-icon-btn:hover {
+    background-color: #88AB8E;
+    color: white;
+}
+
+
+/* Heading styles */
+.heading-primary {
+    color: #8b1537;
+    /* Dark maroon */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.heading-secondary {
+    color: #145da0;
+    /* Blue */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Table styling */
+.kpi-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.kpi-table th {
+    background: #f7f7f7;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.kpi-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* SDG link style */
+.sdg-link {
+    cursor: pointer;
+    color: #8b1537;
+    text-decoration: underline;
+}
+
+
+
+

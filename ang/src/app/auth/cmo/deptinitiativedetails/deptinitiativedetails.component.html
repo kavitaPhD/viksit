@@ -1,0 +1,48 @@
+<div class="container-fluid px-0 wow fadeIn mt-4 mb-4" data-wow-delay="0.1s">
+    <div class="container py-2">
+        <div class="row g-3">
+            <div class="col-md-1">
+                <a class="back-icon-btn" [routerLink]="['/cmo/cmodeptinitiative']">
+                    <span class="icon">←</span> Back
+                </a>
+            </div>
+            <div class="col-md-11">
+                <h2 class="fw-bold text-center mb-2">
+                    <span style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> <u> {{this.departmentname}} </u> </span> 's Inititative-wise Progress (Short-Term, 2030)
+                </h2>
+            </div>
+        </div>
+        <form [formGroup]="departmentwiseinitiativeprogress" class="form-container">
+            <div class="row g-3 mt-4 mb-4">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="initiative-table">
+                            <thead>
+                                <tr>
+                                    <th class="sn-col" rowspan="2">S.No.</th>
+                                    <th class="title-col" rowspan="2">Initiative Title</th>                                  
+                                    <th rowspan="2">Type</th>                                   
+                                    <th colspan="3">Status</th>
+                                </tr>
+                                <tr>
+                                    <th class="status-col">Completed</th>
+                                    <th class="status-col">In Progress</th>                                   
+                                </tr>
+                            </thead>
+                            <tbody>                    
+                                <tr *ngFor="let dept of initiativedetails; let i = index">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{dept.initiative_title}}</td>
+                                    <td>{{dept.term_description}}</td>
+                                    <td class="status-col ">-</td>
+                                    <td class="status-col">-</td>  
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
