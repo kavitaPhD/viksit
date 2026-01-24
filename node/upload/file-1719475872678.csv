@@ -1,0 +1,83 @@
+﻿goal_id,indicator_desc,cg_year,normalize_score,cg_value,district_indicator_master_id
+Goal 1,1.2.1 District MPI score,2023,100,0.07,1051
+Goal 1,"1.3.1 Percentage of households with any usual member covered by a health scheme or health insurance, (in percentage)",2023,54.45344,82,1045
+Goal 1,"1.3.2 Percentage of population covered by Social Protection Schemes (Old age/widow, divorced, separated, destitute/disabled)",2023,4.177162,8.7,1032
+Goal 1,1.3.3 Persons provided employment as a percentage of persons who demanded employment under Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA),2023,100,100,1012
+Goal 1,1.3.4 Number of disabled persons who have worked in MGNREGA as a proportion of disabled persons registered in MGNREGA,2023,26.145834,29.1,1013
+Goal 1,1.3.5 Percentage of households living in katcha houses (rural),2023,53.49621,27.6,1061
+Goal 2,2.1.1 Children under 5 years who are underweight (weight-for-age) (%),2023,13.782991,31.3,1033
+Goal 2,"2.1.2 Proportion of beneficiaries covered under Chhattisgarh National Food Security Act 2012, (in percentage)",2023,60.681114,91.11,1052
+Goal 2,2.2.1 Children under 5 years who are stunted (height-for-age) (%) ,2023,28.642715,34.6,1034
+Goal 2,2.2.2 Pregnant women age 15-49 years who are anaemic (<11.0 g/dl) (%),2023,57.371796,51.8,1082
+Goal 2,2.2.3 Adolescent (15 -19 years) who are anaemic (%),2023,31.424149,58.5,1001
+Goal 2,2.3.1 Agriculture productivity of rice (in kg per hectare),2023,76.92857,2477,1021
+Goal 2,2.3.2 Agriculture productivity of wheat (in kg per hectare),2023,73.45238,1754,1022
+Goal 3,3.1.1 Percentage of Institutional Deliveries conducted (Including C-Sections),2023,78.49687,89.7,1035
+Goal 3,"3.2.1 Under - five mortality rate, (per 1,000 live births)",2023,72.08791,50.4,1046
+Goal 3,3.2.2 Percentage of children aged 12-23 months fully immunized,2023,78.80562,90.95,1028
+Goal 3,"3.3.1 Tuberculosis incidence per 1,00,000 population",2023,45.73547,131,1053
+Goal 3,"3.4.1 Suicide mortality rate, (per 1,00,000 population)",2023,51.625385,25,1008
+Goal 3,"3.6.1 People killed in road accidents (per 1,00,000 population) ",2023,42.151913,52.8,1007
+Goal 3,"3.8.1 Total physicians, nurses and midwives per 10,000 population",2023,10.504004,7,1029
+Goal 4,4.1.1 Adjusted Net Enrolment Ratio in elementary (class 1-8) education,2023,62.791634,90.75,1071
+Goal 4,4.1.2 Gross Enrolment Ratio in higher secondary (class 11-12) education,2023,51.9367,68.11,1072
+Goal 4,4.1.3 Percentage of students in grade 8 achieving at least a minimum proficiency level in terms of nationally defined learning outcomes to be attained by pupils at the end of each of above grades,2023,63.155556,75.13,1039
+Goal 4,4.1.4 Average annual dropout rate at secondary level (class 9-10),2023,71.26373,14.03,1073
+Goal 4,4.3.1 Gross enrolment ratio (GER) in higher education,2023,35.71587,21.04,1031
+Goal 4,4.a.1 Proportion of schools with access to: basic drinking water,2023,99.384346,99.86,1074
+Goal 4,4.a.2 Proportion of schools with access to: basic sanitation facilities,2023,84.501724,85.63,1075
+Goal 4,4.c.1 Proportion of trained teachers at secondary level (class 9-10),2023,53.56746,58.22,1076
+Goal 4,4.c.2 Pupil Teacher ratio at secondary level (class-9-10),2023,100,19,1077
+Goal 5,"5.1.1 Rate of crimes against women per 1,00,000 female population",2023,75.37713,5.06,1009
+Goal 5,5.1.2 Sex Ratio at Birth,2023,80.48781,960,1030
+Goal 5,5.2.1 Per lakh women who have experienced cruelty/physical violence by husband or his relative during the calendar year,2023,43.975903,47.43,1042
+Goal 5,"5.5.1 Proportion of seats held by women in  Local Self Government- three tire panchayat and ULB election, (in percentage) ",2023,100,54.52,1019
+Goal 5,5.6.1 Unmet need for family planning for currently married women aged 15-49 years (in percentage),2023,48.125,8.3,1047
+Goal 5,5.a.1 Operational land holdings (Female operated operational Holdings),2023,17.872833,14.48,1020
+Goal 6,6.1.1 Percentage of Rural Population getting safe and adequate drinking water within premises through Pipe Water Supply (PWS),2023,20.220083,42,1062
+Goal 6,6.1.2 Percentage of Urban Population getting safe and adequate drinking water within premises through Pipe Water Supply (PWS),2023,53.846153,76,1079
+Goal 6,6.1.3 Percentage of Rural population using an improved drinking water source (Population covered with >=40 LPCD),2023,82.38661,96,1026
+Goal 6,6.1.4 Percentage of Urban population using an improved drinking water source,2023,64.70588,82,1080
+Goal 6,6.2.1 Proportion of Rural households having access to toilet facility ,2023,100,100,1025
+Goal 6,6.2.1 Proportion of Urban households having access to toilet facility ,2023,100,100,1049
+Goal 6,6.2.2 Percentage of Gram Panchayat (GP) achieving Open Defecation Free (ODF) target,2023,100,100,1024
+Goal 6,6.2.3 Proportion of schools with separate toilet facility for girls (in percentage),2023,86.9961,99,1004
+Goal 6,6.4.1 Percentage ground water withdrawal against availability,2023,100,45,1015
+Goal 6,6.6.1 Percentage of blocks/mandals/taluka over- exploited,2023,100,0,1014
+Goal 7,7.1.1 Percentage of households electrified ,2023,100,100,1027
+Goal 7,7.1.2 Percentage of household using clean cooking fuel,2023,71.07692,81.2,1057
+Goal 8,"8.10.1 Number of banking outlets per 1,00,000 population",2023,100,36.24,1069
+Goal 8,"8.10.2 Automated Teller Machines (ATMs) per 1,00,000 population",2023,19.524794,11.49,1011
+Goal 8,8.10.3 Proportion of women account holders in PMJDY ,2023,100,55.75,1070
+Goal 8,8.5.1 Workforce Participation Ratio (WPR) (in rate per 100). a) Total b) male c) female ,2023,51.05354,71.66,1036
+Goal 8,8.5.2 Labour force participation rate (%) (15-59 years) ,2023,11.918295,18.71,1037
+Goal 9,9.1.1 Percentage of targeted habitations connected by all-weather roads under Pradhan Mantri Gram Sadak Yojana,2023,92.85714,98,1060
+Goal 9,9.2.1 Manufacturing employment as a proportion of total employment (in percentage),2023,6.858903,1.3937308,1023
+Goal 10,10.2.1 Proportion of SC/ST persons in local Elected bodies,2023,100,51.66,1002
+Goal 10,10.2.2 Percentage of population in the lowest two wealth quintiles as per the Wealth Index,2023,55.637962,39.98,1048
+Goal 10,10.4.1 Rate total crime against SCs/STs,2023,73.62637,6.96,1040
+Goal 11,"11.1.1 Proportion of Urban Population Living in Slums, informal Settlements or Inadequate Housing",2023,71.42857,8,1081
+Goal 11,11.1.2 Percentage of urban households living in katcha houses,2023,52.38095,20,1050
+Goal 11,"11.2.1 People killed/injured in road accidents ( per 1,00,000 population)",2023,32.137733,20,1010
+Goal 11,11.6.1 Percentage of wards with 100% door to door waste collection,2023,100,100,1064
+Goal 11,11.6.2 Percentage of urban areas having drainage facility (covered),2023,49.019608,74,1068
+Goal 11,11.6.3 Percentage Municipal Solid Waste (MSW) treated against MSW generated,2023,100,100,1065
+Goal 11,11.6.4 Installed sewage treatment capacity as a proportion of septage generated in urban areas ,2023,100,117,1066
+Goal 12,"12.4.1 Percentage use of nitrogen fertilizer out of total N,P,K, (Nitrogen, Phosphorous, Potassium)",2023,94.45087,57.96,1005
+Goal 12,12.5.1 Per capita hazard waste generated,2023,96.29826,1.81,1016
+Goal 12,12.5.2 Quantity of hazardous waste recycled to total hazardous waste generated (in percentage),2023,84.98799,85,1017
+Goal 12,12.5.3 Per capita (in gm) plastic waste generated in urban areas ,2023,72.218185,15.28,1003
+Goal 12,12.5.4 Proportion of BMW treated to total quantity of BMW generated ,2023,100,100,1018
+Goal 12,12.5.5 Percentage of wards with 100% source segregation,2023,100,100,1067
+Goal 13,"13.1.1 Number of deaths attributed to extreme climate per 1,00,000 population ",2023,82.6875,2.77,1063
+Goal 13,13.2.1 CO2 saved from LED bulbs per 1000 population,2023,100,34.83,1054
+Goal 15,15.2.1 Total area covered under different afforestation schemes (in Hectare),2023,54.411766,1.5,1055
+Goal 15,"15.7.1 Number of cases registered under the Wildlife Protection Act, 1972",2023,85.71429,1,1056
+Goal 16,"16.2.1 Number of victims rescued from human trafficking per 1,00,000 population",2023,100,0,1006
+Goal 16,"16.2.2 Proportion of Crime Committed against Children during the year, ( per 1,00,000 children)",2023,43.40576,56,1043
+Goal 16,16.2.3 Number of Missing Children per lakh population,2023,63.18727,31,1044
+Goal 16,16.3.1 Number of courts per lakh population,2023,38.52459,2,1038
+Goal 16,"16.5.1 Cases reported under Prevention of Corruption Act and related section of IPC per 1,00,000 population",2023,91.74312,1,1041
+Goal 16,16.9.1 Percentage of net births registered,2023,100,109,1058
+Goal 16,16.9.2 Percentage of net death registered,2023,55.357143,85,1059
+Goal 16,"16.9.3 Proportion of population covered under Aadhaar, (in percentage)",2023,90.61128,97.22,1078
