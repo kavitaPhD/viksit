@@ -14,6 +14,11 @@ import { SchememasterComponent } from './schememaster/schememaster.component';
 import { NewinitaitiveComponent } from './newinitaitive/newinitaitive.component';
 import { AddkpiComponent } from './addkpi/addkpi.component';
 import { ProgresstrackingComponent } from './progresstracking/progresstracking.component';
+import { KpiadditionComponent } from './kpiaddition/kpiaddition.component';
+import { KpimasterComponent } from './kpimaster/kpimaster.component';
+import { KpiprogressentryComponent } from './kpiprogressentry/kpiprogressentry.component';
+import { KpiprogressdashboardComponent } from './kpiprogressdashboard/kpiprogressdashboard.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 const routes: Routes = [
   {
@@ -72,7 +77,26 @@ const routes: Routes = [
     path: 'progresstracking/:initaitiveid',
     component: ProgresstrackingComponent
   },
-
+  {
+    path: 'kpiaddition',
+    component: KpiadditionComponent
+  },
+  {
+    path: 'kpimaster',
+    component: KpimasterComponent
+  }, 
+  {
+    path: 'kpiprogressentry',
+    component: KpiprogressentryComponent
+  },
+  {
+    path: 'kpiprogressdashboard',
+    component: KpiprogressdashboardComponent
+  },  
+  {
+    path: 'admindashboard',
+    component: AdmindashboardComponent
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,127 @@
+<div class="container-fluid py-4">
+    <h1 class="mb-4 text-center">KPI Progress Tracking 
+        <!-- <span
+            style="font-size: 21px; font-weight: 600; color: #8b1537; margin: 10px 0;"> <u> "Agriculture "
+            </u> </span> 
+            Department -->
+        </h1>
+    <form>
+        <div class="row">
+
+            <!-- Select KPI -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Select KPI</label>
+                <select class="form-select">
+                    <option value="">-- Select KPI --</option>
+                    <option>Total Agricultural Production</option>
+                    <option>Food Processing Output</option>
+                    <option>Farmer Income Growth</option>
+                    <option>Cold Storage Capacity</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Department Section</label>
+                <select class="form-select">
+                    <option value="">-- Department Section --</option>
+                    <option>Seed Section</option>
+                    <option>Fertilizer Section</option>
+                </select>
+            </div>
+
+            <!-- Reporting Period -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Reporting Period</label>
+                <select class="form-select">
+                    <option value="">-- Select Period --</option>
+                    <option>Quarterly</option>
+                    <option>Half Yearly</option>
+                    <option>Yearly</option>
+                </select>
+            </div>
+
+            <!-- Level -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Level</label>
+                <select class="form-select">
+                    <option value="">Select Level</option>
+                    <option>District</option>
+                    <option>Block</option>
+                    <option>Control</option>
+                </select>
+            </div>
+
+            <!-- District / Block -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Location</label>
+                <select class="form-select">
+                    <option value="">-- Select District/Block  --</option>
+                    <option>Balod</option>
+                    <option>Balrampur</option>
+                    <option>Bijapur</option>
+                </select>
+            </div>
+           
+
+            <!-- Date -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Data Entry Date</label>
+                <input type="date" class="form-control">
+            </div>
+
+            <!-- Target Value (Read-only) -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Target Value</label>
+                <input type="number" class="form-control" placeholder="Target" readonly>
+            </div>
+
+            <!-- Achieved Value -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Achieved Value</label>
+                <input type="number" class="form-control" placeholder="Enter achieved value">
+            </div>
+
+            <!-- Achievement Percentage -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Achievement (%)</label>
+                <input type="number" class="form-control" placeholder="Achievement (%)">
+            </div>
+
+            <!-- Data Source -->
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Data Source</label>
+                <input type="text" class="form-control" placeholder="e.g. Dept Report / MIS">
+            </div>
+
+            <!-- Responsible Officer -->
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Responsible Officer</label>
+                <input type="text" class="form-control" placeholder="Officer Name / Designation">
+            </div>
+
+            <!-- Remarks -->
+            <div class="col-md-12 mb-3">
+                <label class="form-label">Remarks / Issues / Actions Taken</label>
+                <textarea class="form-control" rows="3" placeholder="Enter remarks"></textarea>
+            </div>
+
+            <!-- Status -->
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Status</label>
+                <select class="form-select">
+                    <option>On Track</option>
+                    <option>Delayed</option>
+                    <option>Completed</option>
+                    <option>At Risk</option>
+                </select>
+            </div>
+
+            <!-- Buttons -->
+            <div class="col-md-12 mt-3">
+                <button type="submit" class="btn btn-success">Save Progress</button> &nbsp;
+                <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+
+        </div>
+    </form>
+</div>

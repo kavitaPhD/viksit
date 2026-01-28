@@ -28,6 +28,7 @@ import { PhotogalleryComponent } from './photogallery/photogallery.component';
 import { GuidelinesComponent } from './guidelines/guidelines.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ThemedetailsComponent } from './themedetails/themedetails.component';
+import { ThemewisedeptComponent } from './themewisedept/themewisedept.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/');
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PhotogalleryComponent,
     GuidelinesComponent,
     ContactusComponent,
-    ThemedetailsComponent
+    ThemedetailsComponent,
+    ThemewisedeptComponent
   ],
   imports: [
     BrowserModule,

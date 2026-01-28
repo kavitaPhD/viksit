@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Server version:               11.0.2-MariaDB - mariadb.org binary distribution
 -- Server OS:                    Win64
--- HeidiSQL Version:             12.3.0.6589
+-- HeidiSQL Version:             12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -107,6 +107,75 @@ CREATE TABLE IF NOT EXISTS `commodity_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table visiondashboard.commodity_data: ~0 rows (approximately)
+
+-- Dumping structure for table visiondashboard.department_theme
+CREATE TABLE IF NOT EXISTS `department_theme` (
+  `department_name` varchar(150) DEFAULT NULL,
+  `theme_name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table visiondashboard.department_theme: ~60 rows (approximately)
+INSERT INTO `department_theme` (`department_name`, `theme_name`) VALUES
+	('Agriculture', 'Leader in Inland Logistics'),
+	('Agriculture', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('Agriculture', 'Leader in Sustainable and Renewables led Development'),
+	('Art & Culture', 'Art and Culture Capital of India'),
+	('Aviation', 'Leader in Inland Logistics'),
+	('Aviation', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('Commerce & Industry', 'Premier Investment Destination'),
+	('Commerce & Industry', 'Titan in Industry'),
+	('Commerce & Industry', 'Expansion into AI & IT services'),
+	('Commerce & Industry', 'Leader in Inland Logistics'),
+	('Commerce & Industry', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('Commerce & Industry', 'Leader in Sustainable and Renewables led Development'),
+	('Commerce & Industry', 'Hub for MFP & Herbals'),
+	('Commerce & Industry', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('Electronics & IT', 'A Healthy & Prospering Society'),
+	('Electronics & IT', 'Governance for Lasting Value Creation in Citizens’s'),
+	('Electronics & IT', 'Expansion into AI & IT services'),
+	('Electronics & IT', 'Leader in Inland Logistics'),
+	('Electronics & IT', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('Electronics & IT', 'Leader in Sustainable and Renewables led Development'),
+	('Electronics & IT', 'Hub for MFP & Herbals'),
+	('Electronics & IT', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('Energy', 'Leader in Sustainable and Renewables led Development'),
+	('Forest', 'Leader in Sustainable and Renewables led Development'),
+	('Forest', 'Hub for MFP & Herbals'),
+	('Good Governance', 'Governance for Lasting Value Creation in Citizens’s'),
+	('Health and Family Welfare', 'A Healthy & Prospering Society'),
+	('Health and Family Welfare', 'Hub for MFP & Herbals'),
+	('Higher Education', 'Land of Innovation, Skilled Human Capital & Quality Education'),
+	('Higher Education', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('Higher Education', 'Hub for MFP & Herbals'),
+	('Higher Education', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('Higher Education', 'Art and Culture Capital of India'),
+	('Housing & Environment', 'Expansion into AI & IT services'),
+	('Housing & Environment', 'Infrastructure for Thriving Communities with Enriched Lives'),
+	('Housing & Environment', 'Leader in Sustainable and Renewables led Development'),
+	('Mining', 'Leader in Sustainable and Renewables led Development'),
+	('Panchayat & Rural Development', 'Infrastructure for Thriving Communities with Enriched Lives'),
+	('Public Relations Dept', 'Art and Culture Capital of India'),
+	('PWD', 'Leader in Inland Logistics'),
+	('Rural Industries', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('School Education', 'Land of Innovation, Skilled Human Capital & Quality Education'),
+	('School Education', 'Hub for MFP & Herbals'),
+	('School Education', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('School Education', 'Art and Culture Capital of India'),
+	('Technical Education and Skill Development', 'Land of Innovation, Skilled Human Capital & Quality Education'),
+	('Technical Education and Skill Development', 'Hub for MFP & Herbals'),
+	('Technical Education and Skill Development', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('Tourism', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('Tourism', 'Hub for MFP & Herbals'),
+	('Tourism', 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry'),
+	('Tourism', 'Art and Culture Capital of India'),
+	('Transport', 'Leader in Inland Logistics'),
+	('Transport', 'Infrastructure for Thriving Communities with Enriched Lives'),
+	('Urban Administration', 'Infrastructure for Thriving Communities with Enriched Lives'),
+	('Urban Administration', 'Leader in Sustainable and Renewables led Development'),
+	('Urban Administration & Panchayat & Rural Development', 'Land of Innovation, Skilled Human Capital & Quality Education'),
+	('Urban Administration & Panchayat & Rural Development', 'Infrastructure for Thriving Communities with Enriched Lives'),
+	('Water Resource', 'Powerhouse of Agricultural Produce & Processed Superfoods'),
+	('Water Resource', 'Leader in Sustainable and Renewables led Development');
 
 -- Dumping structure for table visiondashboard.initiatives_kpis
 CREATE TABLE IF NOT EXISTS `initiatives_kpis` (
@@ -2583,7 +2652,7 @@ CREATE TABLE IF NOT EXISTS `master_kpi` (
   PRIMARY KEY (`kpi_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table visiondashboard.master_kpi: ~6 rows (approximately)
+-- Dumping data for table visiondashboard.master_kpi: ~5 rows (approximately)
 INSERT INTO `master_kpi` (`kpi_id`, `kpi_name`, `kpi_type`, `dept_id`, `initiative_id`, `target_goal_term`, `target_value`, `target_accomplishment_date`, `unit_of_measurement`, `data_source`, `numerator`, `denominator`, `allieddepartment`, `otherallieddepartment`, `active_status`, `kpi_cat`, `scheme`, `created_on`, `updated_on`) VALUES
 	(13, 'Annadaata to Urjadaata: Biofuel Programme launched', 'Output', 1, 226, 'S', NULL, '2027-01-21', NULL, NULL, NULL, NULL, '3,13', '-', 'Y', 'New', '391', '2026-01-21 09:53:35', '2026-01-21 14:17:42'),
 	(14, 'Volume of biomass/feedstock procured for biofuel production', 'Process', 1, 226, 'S', 25.00, '2027-08-21', 'Lakh Metric Tonnes (MT)', 'Agriculture Dept. & Bio-Energy Agency records', 'Actual quantity of biomass/feedstock procured for biofuel production during the reporting period (in Metric Tonnes)', 'Target quantity of biomass/feedstock planned for procurement for the corresponding period (in Metric Tonnes)', '3', '-', 'Y', 'New', '391', '2026-01-21 10:54:30', '2026-01-21 11:24:26'),
@@ -3067,19 +3136,19 @@ CREATE TABLE IF NOT EXISTS `master_themes` (
 
 -- Dumping data for table visiondashboard.master_themes: ~13 rows (approximately)
 INSERT INTO `master_themes` (`theme_id`, `theme_name`, `short_term_initiatives`, `mid_term_initiatives`, `long_term_initiatives`, `description`, `created_at`) VALUES
-	(1, 'Powerhouse of Agricultural Produce & Processed Superfoods', 16, 9, 5, 'Chhattisgarh identifies agriculture as the backbone of its economy, supported by diverse agro-climatic zones and a favorable monsoon. The state is shifting toward a high-growth model by prioritizing livestock, fisheries, and the production of processed superfoods. By modernizing farming methods and expanding global exports, Chhattisgarh aims to maximize farmer incomes and lead the nation in agricultural innovation.', '2025-11-13 07:02:31'),
-	(2, 'Hub for MFP & Herbals', 15, 7, 1, 'Chhattisgarh is evolving into a global hub for Minor Forest Produce (MFP) and herbal products by shifting from raw collection to advanced processing. By 2047, the state will lead the world in sustainable forest management, global branding, and AYUSH-led wellness, ensuring long-term economic prosperity for its forest-dependent communities.', '2025-11-13 07:02:31'),
-	(3, 'Titan in Industry', 8, 11, 5, 'Chhattisgarh stands as a titan in India’s industrial landscape, powering the nation’s growth through its leadership in steel, coal, and mineral resources. By 2047, the state is transitioning toward a future-ready model that prioritizes high-value manufacturing and green technologies. This evolution will establish Chhattisgarh as a global benchmark for innovation, driving a resilient and world-class industrial ecosystem.', '2025-11-13 07:02:31'),
-	(4, 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry', 13, 3, 1, 'Chhattisgarh serves as a treasure trove of natural beauty and cultural heritage, enriched by its vibrant tribal legacy and numerous annual festivals. The state is evolving into a premier global hotspot by leveraging its lush forests, sacred sites, and waterfalls for international travelers. By 2047, Chhattisgarh will lead in sustainable, community-driven tourism that celebrates its unique tapestry while generating widespread prosperity.', '2025-11-13 07:02:31'),
-	(5, 'Leader in Inland Logistics', 8, 6, 5, 'Chhattisgarh leverages its strategic central location and connectivity to seven bordering states to serve as a vital link for national trade. The state is transforming into a primary epicenter for inland logistics by integrating road, rail, and air infrastructure with centralized hubs. By 2047, Chhattisgarh will lead with technology-driven supply chains and sustainable transport solutions, establishing a world-class environment for seamless storage and distribution.', '2025-11-13 07:02:31'),
-	(6, 'Expansion into AI & IT services', 11, 4, 1, 'Chhattisgarh leverages its power-surplus status and competitive infrastructure to emerge as a premier global hub for the digital economy. The state is accelerating its transition into a high-tech epicenter for AI, blockchain, and cloud services, supported by a thriving startup ecosystem. By 2047, Chhattisgarh will lead India’s digital transformation, maximizing its workforce potential to become a global benchmark for IT innovation.', '2025-11-13 07:02:31'),
-	(7, 'Land of Innovation, Skilled Human Capital & Quality Education', 13, 6, 1, 'Chhattisgarh is leveraging its young demographic dividend to drive India’s vision of becoming a developed nation. By prioritizing a universally accessible education and skilling ecosystem, the state is transforming its youth into a globally competitive workforce. Supported by strong policy intent and record budget allocations, Chhattisgarh is building a foundation for innovation, scientific advancement, and long-term socio-economic growth.', '2025-11-13 07:02:31'),
-	(8, 'A Healthy & Prospering Society', 18, 8, 4, 'Chhattisgarh is building a world-class, holistic healthcare ecosystem to ensure the well-being of every citizen as a foundation for growth. By expanding primary care through community volunteers and mobile clinics, the state has already achieved significant improvements in insurance coverage and maternal health. The vision for 2047 focuses on making quality healthcare affordable, accessible, and digitally enabled for all.', '2025-11-13 07:02:31'),
-	(9, 'Leader in Sustainable and Renewables led Development', 18, 3, 2, 'Chhattisgarh is balancing rapid growth with environmental stewardship to lead India’s green transition. By leveraging its vast forest cover and high solar potential, the state is moving toward a circular economy powered by renewable energy. The vision for 2047 focuses on reducing carbon footprints, protecting biodiversity, and ensuring that development remains sustainable for future generations.', '2025-11-13 07:02:31'),
-	(10, 'Art and Culture Capital of India', 6, 6, 3, 'Chhattisgarh is a vibrant melting pot of diverse ethnic traditions and historical significance, deeply rooted in its "sanskritik virasat". Home to numerous tribal communities, the state preserves a rich heritage of unique crafts, music, and oral storytelling. From world-renowned festivals and rituals to its distinct cuisine and deep connection with nature, Chhattisgarh is positioning itself as India’s cultural capital by celebrating its artistic depth and ancestral legacy.', '2025-11-13 07:02:31'),
-	(11, 'Infrastructure for Thriving Communities with Enriched Lives', 8, 5, 3, 'Chhattisgarh is building a foundation for sustainable growth by prioritizing high-quality social and physical infrastructure. By focusing on affordable housing, reliable energy, and clean water systems, the state is transforming cities and villages into resilient, vibrant environments. Through urban modernization and advanced public transport, Chhattisgarh aims to enhance the quality of life and create a prosperous future for all residents.', '2025-11-13 07:02:31'),
-	(12, 'Governance for Lasting Value Creation in Citizens’s', 13, 4, 0, 'Chhattisgarh is redefining its administrative framework to put citizens at the heart of every decision. By embracing "Minimum Government, Maximum Governance," the state is replacing red tape with transparent, technology-driven systems. Through digital transformation and a dedicated focus on accountability, Chhattisgarh is ensuring that public services are efficient, accessible, and designed to foster long-term prosperity and trust.', '2025-11-13 07:02:31'),
-	(13, 'Premier Investment Destination', 2, 3, 2, 'Chhattisgarh is committed to unlocking its vast economic potential by becoming a top choice for private investment. To reach its ambitious growth goals, the state is creating a conducive environment through the development of specialized industrial parks and economic clusters. By offering seamless support, competitive policy frameworks, and best-in-class facilitation, Chhattisgarh aims to attract the capital needed to drive sustained prosperity across its industrial and social sectors.', '2025-11-13 07:02:31');
+	(1, 'Powerhouse of Agricultural Produce & Processed Superfoods', 16, 9, 5, 'Chhattisgarh identifies agriculture as the backbone of its economy, supported by diverse agro-climatic zones and a favorable monsoon. The state is shifting toward a high-growth model by prioritizing livestock, fisheries, and the production of processed superfoods. By modernizing farming methods and expanding global exports, Chhattisgarh aims to maximize farmer incomes and lead the nation in agricultural innovation.', '2025-11-13 01:32:31'),
+	(2, 'Hub for MFP & Herbals', 15, 7, 1, 'Chhattisgarh is evolving into a global hub for Minor Forest Produce (MFP) and herbal products by shifting from raw collection to advanced processing. By 2047, the state will lead the world in sustainable forest management, global branding, and AYUSH-led wellness, ensuring long-term economic prosperity for its forest-dependent communities.', '2025-11-13 01:32:31'),
+	(3, 'Titan in Industry', 8, 11, 5, 'Chhattisgarh stands as a titan in India’s industrial landscape, powering the nation’s growth through its leadership in steel, coal, and mineral resources. By 2047, the state is transitioning toward a future-ready model that prioritizes high-value manufacturing and green technologies. This evolution will establish Chhattisgarh as a global benchmark for innovation, driving a resilient and world-class industrial ecosystem.', '2025-11-13 01:32:31'),
+	(4, 'Tourism - Celebrating Chhattisgarh’s Natural & Cultural Tapestry', 13, 3, 1, 'Chhattisgarh serves as a treasure trove of natural beauty and cultural heritage, enriched by its vibrant tribal legacy and numerous annual festivals. The state is evolving into a premier global hotspot by leveraging its lush forests, sacred sites, and waterfalls for international travelers. By 2047, Chhattisgarh will lead in sustainable, community-driven tourism that celebrates its unique tapestry while generating widespread prosperity.', '2025-11-13 01:32:31'),
+	(5, 'Leader in Inland Logistics', 8, 6, 5, 'Chhattisgarh leverages its strategic central location and connectivity to seven bordering states to serve as a vital link for national trade. The state is transforming into a primary epicenter for inland logistics by integrating road, rail, and air infrastructure with centralized hubs. By 2047, Chhattisgarh will lead with technology-driven supply chains and sustainable transport solutions, establishing a world-class environment for seamless storage and distribution.', '2025-11-13 01:32:31'),
+	(6, 'Expansion into AI & IT services', 11, 4, 1, 'Chhattisgarh leverages its power-surplus status and competitive infrastructure to emerge as a premier global hub for the digital economy. The state is accelerating its transition into a high-tech epicenter for AI, blockchain, and cloud services, supported by a thriving startup ecosystem. By 2047, Chhattisgarh will lead India’s digital transformation, maximizing its workforce potential to become a global benchmark for IT innovation.', '2025-11-13 01:32:31'),
+	(7, 'Land of Innovation, Skilled Human Capital & Quality Education', 13, 6, 1, 'Chhattisgarh is leveraging its young demographic dividend to drive India’s vision of becoming a developed nation. By prioritizing a universally accessible education and skilling ecosystem, the state is transforming its youth into a globally competitive workforce. Supported by strong policy intent and record budget allocations, Chhattisgarh is building a foundation for innovation, scientific advancement, and long-term socio-economic growth.', '2025-11-13 01:32:31'),
+	(8, 'A Healthy & Prospering Society', 18, 8, 4, 'Chhattisgarh is building a world-class, holistic healthcare ecosystem to ensure the well-being of every citizen as a foundation for growth. By expanding primary care through community volunteers and mobile clinics, the state has already achieved significant improvements in insurance coverage and maternal health. The vision for 2047 focuses on making quality healthcare affordable, accessible, and digitally enabled for all.', '2025-11-13 01:32:31'),
+	(9, 'Leader in Sustainable and Renewables led Development', 18, 3, 2, 'Chhattisgarh is balancing rapid growth with environmental stewardship to lead India’s green transition. By leveraging its vast forest cover and high solar potential, the state is moving toward a circular economy powered by renewable energy. The vision for 2047 focuses on reducing carbon footprints, protecting biodiversity, and ensuring that development remains sustainable for future generations.', '2025-11-13 01:32:31'),
+	(10, 'Art and Culture Capital of India', 6, 6, 3, 'Chhattisgarh is a vibrant melting pot of diverse ethnic traditions and historical significance, deeply rooted in its "sanskritik virasat". Home to numerous tribal communities, the state preserves a rich heritage of unique crafts, music, and oral storytelling. From world-renowned festivals and rituals to its distinct cuisine and deep connection with nature, Chhattisgarh is positioning itself as India’s cultural capital by celebrating its artistic depth and ancestral legacy.', '2025-11-13 01:32:31'),
+	(11, 'Infrastructure for Thriving Communities with Enriched Lives', 8, 5, 3, 'Chhattisgarh is building a foundation for sustainable growth by prioritizing high-quality social and physical infrastructure. By focusing on affordable housing, reliable energy, and clean water systems, the state is transforming cities and villages into resilient, vibrant environments. Through urban modernization and advanced public transport, Chhattisgarh aims to enhance the quality of life and create a prosperous future for all residents.', '2025-11-13 01:32:31'),
+	(12, 'Governance for Lasting Value Creation in Citizens’s', 13, 4, 0, 'Chhattisgarh is redefining its administrative framework to put citizens at the heart of every decision. By embracing "Minimum Government, Maximum Governance," the state is replacing red tape with transparent, technology-driven systems. Through digital transformation and a dedicated focus on accountability, Chhattisgarh is ensuring that public services are efficient, accessible, and designed to foster long-term prosperity and trust.', '2025-11-13 01:32:31'),
+	(13, 'Premier Investment Destination', 2, 3, 2, 'Chhattisgarh is committed to unlocking its vast economic potential by becoming a top choice for private investment. To reach its ambitious growth goals, the state is creating a conducive environment through the development of specialized industrial parks and economic clusters. By offering seamless support, competitive policy frameworks, and best-in-class facilitation, Chhattisgarh aims to attract the capital needed to drive sustained prosperity across its industrial and social sectors.', '2025-11-13 01:32:31');
 
 -- Dumping structure for table visiondashboard.master_themes_copy
 CREATE TABLE IF NOT EXISTS `master_themes_copy` (
@@ -5633,7 +5702,7 @@ CREATE TABLE IF NOT EXISTS `sdg_indicator_masterkpi` (
   PRIMARY KEY (`indicator_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table visiondashboard.sdg_indicator_masterkpi: ~148 rows (approximately)
+-- Dumping data for table visiondashboard.sdg_indicator_masterkpi: ~106 rows (approximately)
 INSERT INTO `sdg_indicator_masterkpi` (`indicator_id`, `initiative_id`, `sif_target_id`, `indicator_desc`, `kpi_target2030`, `kpi_negation`, `indicator_source`, `uom`, `frequency`, `delete_flag`, `baseline_value`, `sdg_dept_id`, `dept_id`, `computation_description_of_indicator`, `progress_year_data_source`, `data_source`, `numerator`, `denominator`, `kpi_type`, `created_date`, `last_updated_date`, `created_by`, `updated_by`) VALUES
 	(1, 0, 'SIF_TARGET128', 'Net Enrolment Rate in primary education', '100.00', 0, 'UDISE Plus, MoE, GoI', 'Percentage', 'yearly', 'N', 91.30, '29', '16', NULL, 'UDISE Plus, MoE, GoI', NULL, NULL, NULL, 'Foundational Literacy and Numeracy (FLN) improvement', '2026-01-22 07:06:22', '2026-01-22 07:06:22', NULL, NULL),
 	(2, 0, 'SIF_TARGET128', 'Percentage of students in grade 3 achieving at least a minimum proficiency level in language', '100.00', 0, 'NAS Survey, NCERT, GoI', 'Percentage', 'yearly', 'N', 89.30, '29', '16', 'Percentage of students in Grade 3 who scored above 30% in language in National Achievement Survey', 'NAS Survey, NCERT, GoI', 'http://udise.in/', NULL, NULL, 'Foundational Literacy and Numeracy (FLN) improvement', '2026-01-22 07:06:22', '2026-01-22 07:06:22', NULL, NULL),

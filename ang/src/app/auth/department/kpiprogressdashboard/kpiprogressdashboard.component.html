@@ -1,0 +1,219 @@
+<div class="container-fluid py-4" style="background:#F9F8F6;">
+    <!-- Page Title -->
+    <h1 class="mb-4 text-center">
+        KPI Progress Dashboard 
+        <!-- <span style="color:#8b1537; font-weight:600;">
+            <u>Agriculture Department</u>
+        </span> -->
+    </h1>
+    <!-- KPI Selection -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <label class="form-label">Department Section</label> 
+            <select class="form-select">
+                <option>Seed Section</option>
+                <option>Fertilizer Section</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label">Select KPI</label>
+            <select class="form-select">
+                <option>Total Agricultural Production</option>
+                <option>Food Processing Output</option>
+                <option>Farmer Income Growth</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label">Reporting Period</label>
+            <select class="form-select">
+                <option>Quarterly</option>
+                <option>Half Yearly</option>
+                <option>Yearly</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label">Year</label>
+            <select class="form-select">
+                <option>2024–25</option>
+                <option>2025–26</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="row mb-4 text-center">
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6>Total Target</h6>
+                    <h3>120 MT</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6>Achieved</h6>
+                    <h3>92 MT</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6>Achievement %</h6>
+                    <h3>76%</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6>Status</h6>
+                    <span class="badge bg-warning">At Risk</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- District Level Table -->
+    <!-- District Level Table -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>District-wise Progress</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" id="datatable">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>S.No.</th>
+                            <th>District</th>
+                            <th>Target</th>
+                            <th>Achieved</th>
+                            <th>Achievement %</th>
+                            <th>Status</th>
+                            <th>Last Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Balod</td>
+                            <td>20 MT</td>
+                            <td>18 MT</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-success">On Track</span></td>
+                            <td>15-06-2025</td>
+                        </tr>
+    
+                        <tr>
+                            <td>2</td>
+                            <td>Balrampur</td>
+                            <td>25 MT</td>
+                            <td>15 MT</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 60%;">60%</div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-danger">Delayed</span></td>
+                            <td>14-06-2025</td>
+                        </tr>
+    
+                        <tr>
+                            <td>3</td>
+                            <td>Bijapur</td>
+                            <td>15 MT</td>
+                            <td>12 MT</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" style="width: 80%;">80%</div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-warning">At Risk</span></td>
+                            <td>13-06-2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Block Level Table -->
+    <!-- Block Level Table -->
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Block-wise Progress</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped" id="datatable">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>S.No.</th>
+                            <th>District</th>
+                            <th>Block</th>
+                            <th>Target</th>
+                            <th>Achieved</th>
+                            <th>Achievement %</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Balod</td>
+                            <td>Dondi</td>
+                            <td>10 MT</td>
+                            <td>9 MT</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 90%;">90%</div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-success">On Track</span></td>
+                        </tr>
+    
+                        <tr>
+                            <td>2</td>
+                            <td>Balrampur</td>
+                            <td>Rajpur</td>
+                            <td>12 MT</td>
+                            <td>6 MT</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 50%;">50%</div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-danger">Delayed</span></td>
+                        </tr>
+    
+                        <tr>
+                            <td>3</td>
+                            <td>Bijapur</td>
+                            <td>Bhairamgarh</td>
+                            <td>8 MT</td>
+                            <td>7 MT</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 88%;">88%</div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-success">On Track</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>
