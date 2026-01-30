@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CM Dashboard - Multi-Theme Performance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #1b5e20;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            text-align: center;
+            color: black;
+        }
+
+        th {
+            background-color: #8b1537;
+            color: #ffffff;
+        }
+
+        .progress-container {
+            background: #e0e0e0;
+            border-radius: 6px;
+            height: 14px;
+            width: 100%;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 6px;
+            font-size: 11px;
+            line-height: 14px;
+            color: #fff;
+        }
+
+        .good {
+            background: #2e7d32;
+        }
+
+        .average {
+            background: #f9a825;
+        }
+
+        .attention {
+            background: #c62828;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0 30px 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .legend div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-box {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📊 Chief Minister Dashboard - Multi-Theme Performance</h1>
+
+    <!-- STATUS LEGEND -->
+    <div class="legend">
+        <div><span class="color-box" style="background:#2e7d32;"></span> Good (≥ 75%)</div>
+        <div><span class="color-box" style="background:#f9a825;"></span> Average (60% – 74%)</div>
+        <div><span class="color-box" style="background:#c62828;"></span> Needs Attention (&lt; 60%)</div>
+    </div>
+
+    <!-- STATE SUMMARY -->
+    <h2>🏛️ State-Level Theme Summary</h2>
+    <table>
+        <tr>
+            <th>Theme</th>
+            <th>No. of Districts</th>
+            <th>Average District Progress</th>
+            <th>Overall Theme Progress</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Powerhouse of Agricultural Produce & Processed Superfoods</td>
+            <td>2</td>
+            <td>71.5%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar average" style="width:72%">72%</div>
+                </div>
+            </td>
+            <td style="color:#f9a825;font-weight:bold;">Average</td>
+        </tr>
+        <tr>
+            <td>Hub for MFPs and Herbal Products</td>
+            <td>2</td>
+            <td>78%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:78%">78%</div>
+                </div>
+            </td>
+            <td style="color:#2e7d32;font-weight:bold;">Good</td>
+        </tr>
+        <tr>
+            <td>Titan in Industry</td>
+            <td>2</td>
+            <td>65%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar average" style="width:65%">65%</div>
+                </div>
+            </td>
+            <td style="color:#f9a825;font-weight:bold;">Average</td>
+        </tr>
+        <tr>
+            <td>Tourism</td>
+            <td>2</td>
+            <td>58%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar attention" style="width:58%">58%</div>
+                </div>
+            </td>
+            <td style="color:#c62828;font-weight:bold;">Needs Attention</td>
+        </tr>
+        <tr>
+            <td>Leader in Inland Logistics</td>
+            <td>2</td>
+            <td>73%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar average" style="width:73%">73%</div>
+                </div>
+            </td>
+            <td style="color:#f9a825;font-weight:bold;">Average</td>
+        </tr>
+        <tr>
+            <td>Expansion into AI & IT Services</td>
+            <td>2</td>
+            <td>80%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:80%">80%</div>
+                </div>
+            </td>
+            <td style="color:#2e7d32;font-weight:bold;">Good</td>
+        </tr>
+        <tr>
+            <td>A Healthy and Prospering Society</td>
+            <td>2</td>
+            <td>68%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar average" style="width:68%">68%</div>
+                </div>
+            </td>
+            <td style="color:#f9a825;font-weight:bold;">Average</td>
+        </tr>
+        <tr>
+            <td>Leader in Sustainable and Renewables-led Development</td>
+            <td>2</td>
+            <td>75%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:75%">75%</div>
+                </div>
+            </td>
+            <td style="color:#2e7d32;font-weight:bold;">Good</td>
+        </tr>
+        <tr>
+            <td>Art and Culture Capital of India</td>
+            <td>2</td>
+            <td>62%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar average" style="width:62%">62%</div>
+                </div>
+            </td>
+            <td style="color:#f9a825;font-weight:bold;">Average</td>
+        </tr>
+        <tr>
+            <td>Governance for Lasting Value Creation</td>
+            <td>2</td>
+            <td>70%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar average" style="width:70%">70%</div>
+                </div>
+            </td>
+            <td style="color:#f9a825;font-weight:bold;">Average</td>
+        </tr>
+        <tr>
+            <td>Premier Investment Destination</td>
+            <td>2</td>
+            <td>82%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:82%">82%</div>
+                </div>
+            </td>
+            <td style="color:#2e7d32;font-weight:bold;">Good</td>
+        </tr>
+    </table>
+
+    <!-- Example District-Wise Theme Details -->
+    <h2>📍 Powerhouse of Agricultural Produce & Processed Superfoods - District Performance</h2>
+    <table>
+        <tr>
+            <th>District</th>
+            <th>KPI</th>
+            <th>Target</th>
+            <th>Achievement</th>
+            <th>Progress %</th>
+            <th>Progress</th>
+        </tr>
+        <tr>
+            <td rowspan="5">Raipur</td>
+            <td>Total Agricultural Production</td>
+            <td>320</td>
+            <td>300</td>
+            <td>94%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:94%">94%</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Processing Rate</td>
+            <td>30</td>
+            <td>24</td>
+            <td>80%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:80%">80%</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Value Added Output</td>
+            <td>450000</td>
+            <td>380000</td>
+            <td>84%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:84%">84%</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Food Security Index (SDG 2)</td>
+            <td>80</td>
+            <td>70</td>
+            <td>88%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:88%">88%</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Agro-processing Employment (SDG 8)</td>
+            <td>10</td>
+            <td>8</td>
+            <td>80%</td>
+            <td>
+                <div class="progress-container">
+                    <div class="progress-bar good" style="width:80%">80%</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Repeat similar tables for other themes -->
+    <!-- You can copy & update KPI and district data for each theme -->
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CM Dashboard - Powerhouse of Agricultural Produce & Processed Superfoods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #1b5e20;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #8b1537;
+            color: #fff;
+        }
+
+        .progress-container {
+            background: #e0e0e0;
+            border-radius: 6px;
+            height: 14px;
+            width: 100%;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 6px;
+            font-size: 11px;
+            line-height: 14px;
+            color: #fff;
+        }
+
+        .good {
+            background: #2e7d32;
+        }
+
+        .average {
+            background: #f9a825;
+        }
+
+        .attention {
+            background: #c62828;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0 30px 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .legend div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-box {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📊 CM Dashboard - Powerhouse of Agricultural Produce & Processed Superfoods</h1>
+
+    <!-- STATUS LEGEND -->
+    <div class="legend">
+        <div><span class="color-box" style="background:#2e7d32;"></span> Good (≥ 75%)</div>
+        <div><span class="color-box" style="background:#f9a825;"></span> Average (60% – 74%)</div>
+        <div><span class="color-box" style="background:#c62828;"></span> Needs Attention (< 60%)</div>
+        </div>
+
+        <h2>📍 District-wise Progress</h2>
+        <table>
+            <tr>
+                <th>District</th>
+                <th>Total Agricultural Production</th>
+                <th>Processing Rate</th>
+                <th>Value Added Output</th>
+                <th>Food Security Index</th>
+                <th>Agro-processing Employment</th>
+                <th>Theme Progress</th>
+            </tr>
+
+            <!-- All 33 districts -->
+            <tr>
+                <td>Raipur</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:90%">90%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:85%">85%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:88%">88%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:92%">92%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:80%">80%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:87%">87%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Bastar</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:68%">68%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar attention" style="width:55%">55%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:62%">62%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:70%">70%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar attention" style="width:50%">50%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar attention" style="width:61%">61%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Bilaspur</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:78%">78%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:68%">68%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:80%">80%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:72%">72%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:75%">75%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:75%">75%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Durg</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:85%">85%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:80%">80%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:82%">82%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:88%">88%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:79%">79%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:83%">83%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Korba</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:70%">70%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:65%">65%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:68%">68%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:70%">70%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:66%">66%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:68%">68%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Rajnandgaon</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:77%">77%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:70%">70%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:68%">68%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:75%">75%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:71%">71%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:72%">72%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Jagdalpur</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:64%">64%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:66%">66%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar attention" style="width:58%">58%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:63%">63%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:61%">61%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:62%">62%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Janjgir-Champa</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:80%">80%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:78%">78%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:82%">82%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:85%">85%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:76%">76%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:80%">80%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Raigarh</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:66%">66%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:62%">62%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:64%">64%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:67%">67%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:65%">65%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:65%">65%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Kawardha</td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:78%">78%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:70%">70%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar average" style="width:72%">72%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:75%">75%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:74%">74%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="progress-container">
+                        <div class="progress-bar good" style="width:74%">74%</div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Continue similarly for remaining districts... Bastar, Sukma, Dhamtari, Dantewada, Bijapur, Balrampur, Bemetara, Gariaband, Kanker, Kabirdham, Mahasamund, Mungeli, Narayanpur, Balodabazar, Kondagaon, Sarangarh, Gaurela-Pendra-Marwahi, Baloda Bazar -->
+
+        </table>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CM Dashboard - Department-wise Progress</title>
+<style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; padding: 20px; }
+    h1, h2 { text-align: center; color: #1b5e20; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 30px; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    th, td { padding: 8px; border-bottom: 1px solid #ddd; font-size: 13px; text-align: center; }
+    th { background-color: #8b1537; color: #fff; }
+    .progress-container { background: #e0e0e0; border-radius: 6px; height: 14px; width: 100%; }
+    .progress-bar { height: 100%; border-radius: 6px; font-size: 11px; line-height: 14px; color: #fff; }
+    .good { background: #2e7d32; }
+    .average { background: #f9a825; }
+    .attention { background: #c62828; }
+    .legend { display:flex; justify-content:center; gap:30px; margin:20px 0 30px 0; font-size:14px; font-weight:bold; }
+    .legend div { display:flex; align-items:center; gap:8px; }
+    .color-box { width:16px; height:16px; display:inline-block; border-radius:3px; }
+</style>
+</head>
+<body>
+
+<h1>📊 CM Dashboard - Powerhouse of Agricultural Produce & Processed Superfoods (Department-wise)</h1>
+
+<!-- STATUS LEGEND -->
+<div class="legend">
+    <div><span class="color-box" style="background:#2e7d32;"></span> Good (≥ 75%)</div>
+    <div><span class="color-box" style="background:#f9a825;"></span> Average (60% – 74%)</div>
+    <div><span class="color-box" style="background:#c62828;"></span> Needs Attention (< 60%)</div>
+</div>
+
+<h2>🏛 Department-wise KPI Progress</h2>
+<table>
+<tr>
+    <th>Department</th>
+    <th>Total Agricultural Production</th>
+    <th>Processing Rate</th>
+    <th>Value Added Output</th>
+    <th>Food Security Index</th>
+    <th>Agro-processing Employment</th>
+    <th>Theme Progress</th>
+</tr>
+
+<tr>
+    <td>Agriculture</td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:90%">90%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:85%">85%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:88%">88%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:92%">92%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:80%">80%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:87%">87%</div></div></td>
+</tr>
+
+<tr>
+    <td>Food Processing</td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:70%">70%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:65%">65%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:75%">75%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:66%">66%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:69%">69%</div></div></td>
+</tr>
+
+<tr>
+    <td>Commerce & Industry</td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:80%">80%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:75%">75%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:78%">78%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:82%">82%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:77%">77%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:78%">78%</div></div></td>
+</tr>
+
+<tr>
+    <td>Tourism</td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:65%">65%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:60%">60%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:62%">62%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:64%">64%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:64%">64%</div></div></td>
+</tr>
+
+<tr>
+    <td>Logistics & Transport</td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:85%">85%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:82%">82%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:80%">80%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:88%">88%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:81%">81%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:83%">83%</div></div></td>
+</tr>
+
+<tr>
+    <td>IT & AI Services</td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:70%">70%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:66%">66%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:72%">72%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:65%">65%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+</tr>
+
+<tr>
+    <td>Health & Family Welfare</td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:80%">80%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:78%">78%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:82%">82%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:85%">85%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:79%">79%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:81%">81%</div></div></td>
+</tr>
+
+<tr>
+    <td>Renewables & Environment</td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:70%">70%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:65%">65%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:72%">72%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:66%">66%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+</tr>
+
+<tr>
+    <td>Culture & Art</td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:78%">78%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:75%">75%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:80%">80%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:82%">82%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:76%">76%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:78%">78%</div></div></td>
+</tr>
+
+<tr>
+    <td>Governance & Citizen Services</td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:80%">80%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:78%">78%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:82%">82%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:85%">85%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:79%">79%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar good" style="width:81%">81%</div></div></td>
+</tr>
+
+<tr>
+    <td>Investment Promotion</td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:65%">65%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:70%">70%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:72%">72%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:66%">66%</div></div></td>
+    <td><div class="progress-container"><div class="progress-bar average" style="width:68%">68%</div></div></td>
+</tr>
+
+</table>
+
+</body>
+</html>

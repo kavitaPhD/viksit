@@ -21,6 +21,8 @@ import { KpimasterComponent } from './kpimaster/kpimaster.component';
 import { KpiprogressentryComponent } from './kpiprogressentry/kpiprogressentry.component';
 import { KpiprogressdashboardComponent } from './kpiprogressdashboard/kpiprogressdashboard.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AdminthemedashboardComponent } from './adminthemedashboard/adminthemedashboard.component';
+import { CmdashboardComponent } from './cmdashboard/cmdashboard.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     KpimasterComponent,
     KpiprogressentryComponent,
     KpiprogressdashboardComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    AdminthemedashboardComponent,
+    CmdashboardComponent
   ],
   imports: [
     CommonModule,

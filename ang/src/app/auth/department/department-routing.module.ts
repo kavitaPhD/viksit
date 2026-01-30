@@ -19,6 +19,8 @@ import { KpimasterComponent } from './kpimaster/kpimaster.component';
 import { KpiprogressentryComponent } from './kpiprogressentry/kpiprogressentry.component';
 import { KpiprogressdashboardComponent } from './kpiprogressdashboard/kpiprogressdashboard.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AdminthemedashboardComponent } from './adminthemedashboard/adminthemedashboard.component';
+import { CmdashboardComponent } from './cmdashboard/cmdashboard.component';
 
 const routes: Routes = [
   {
@@ -96,6 +98,14 @@ const routes: Routes = [
   {
     path: 'admindashboard',
     component: AdmindashboardComponent
+  },
+  {
+    path: 'adminthemedashboard',
+    component: AdminthemedashboardComponent
+  },
+  {
+    path: 'cmdashboard',
+    component: CmdashboardComponent
   },
 ];
 

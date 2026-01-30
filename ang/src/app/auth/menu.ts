@@ -11,6 +11,8 @@ export const MENUITEMS: any = {
         { state: '/department/kpiprogressentry', type: 'link', name: 'KPI Progress Entry', icon: 'article' },
         { state: '/department/kpiprogressdashboard', type: 'link', name: 'KPI Prgress Tracking', icon: 'timeline' },
         { state: '/department/admindashboard', type: 'link', name: 'Admin Dashboard', icon: 'article' },
+        { state: '/department/adminthemedashboard', type: 'link', name: 'Admin Dashboard', icon: 'article' },
+        { state: '/department/cmdashboard', type: 'link', name: 'CM Dashboard', icon: 'article' },
         //{ state: '/department/initiativealign', type: 'link', name: 'Initiative Alignment', icon: 'article' }, 
         // { state: '/department/nodalentry', type: 'link', name: 'Nodal Entry', icon: 'account_tree' },
         // { state: '/department/schemeentry', type: 'link', name: 'Scheme Entry', icon: 'article' },

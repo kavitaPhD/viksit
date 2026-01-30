@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Powerhouse of Agricultural Produce & Processed Superfoods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+            color: black;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #1b5e20;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            background: #ffffff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            text-align: left;
+            color: black;
+        }
+
+        th {
+            background-color: #8b1537;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
 <div class="container-fluid py-4" style="background-color: #F9F8F6;">
     <h1 class="mb-4 text-center">
         Add/Edit KPIs for the theme
@@ -8,37 +55,30 @@
 
     <form class="mb-4">
         <div class="row">
-            <!-- Left Column: KPI Form -->
+
+            <!-- LEFT COLUMN -->
             <div class="col-md-8">
-                <!-- KPI Category -->
+
                 <div class="mb-3">
                     <label class="form-label">Select KPI Category</label><br>
                     <input type="radio" name="kpi_cat" checked> New KPI &nbsp;
                     <input type="radio" name="kpi_cat"> Suggestive KPI
                 </div>
 
-                <!-- Suggestive KPIs -->
                 <div class="mb-3">
                     <label class="form-label">Suggestive KPIs</label>
                     <select class="form-select">
-                        <option value="0">-- Select Suggestive KPIs --</option>
-                        <option value="1">Total Agricultural Production (Million Tonnes)</option>
-                        <option value="2">Food Processing Output (₹ Crore)</option>
-                        <option value="3">Percentage of Produce Processed Locally (%)</option>
-                        <option value="4">Agro-Processing Units Established (Count)</option>
-                        <option value="5">Farmer Income Growth (%)</option>
-                        <option value="6">Export of Agri & Processed Foods (₹ Crore)</option>
-                        <option value="7">Cold Storage Capacity (Metric Tonnes)</option>
-                        <option value="8">Post-Harvest Loss Reduction (%)</option>
-                        <option value="9">Area Under High-Value Crops (Hectares)</option>
-                        <option value="10">Employment in Agro & Food Processing (Jobs)</option>
+                        <option>-- Select Suggestive KPI --</option>
+                        <option>Area Covered Under Natural Farming (ha)</option>
+                        <option>Number of Farmers Covered Under Natural Farming</option>
                     </select>
                 </div>
 
-                <!-- KPI Name -->
                 <div class="mb-3">
                     <label class="form-label">Enter KPI</label>
-                    <input type="text" class="form-control" placeholder="Enter KPI">
+                    <input type="text" class="form-control"
+                        placeholder="Enter KPI"
+                        value="Area Covered Under Natural Farming (ha)">
                 </div>
 
                 <div class="mb-3">
@@ -46,269 +86,170 @@
                     <input type="text" class="form-control" placeholder="Department Section">
                 </div>
 
-                <!-- Scheme Selection -->
                 <div class="mb-3">
                     <label class="form-label">Enter Scheme</label>
                     <select class="form-select" multiple>
-                        <option disabled>-- Select Scheme --</option>
-                        <option value="1">Pradhan Mantri Krishi Sinchai Yojana (PMKSY)</option>
-                        <option value="2">National Food Security Mission (NFSM)</option>
-                        <option value="3">Rashtriya Krishi Vikas Yojana (RKVY)</option>
-                        <option value="4">Paramparagat Krishi Vikas Yojana (PKVY)</option>
-                        <option value="5">Soil Health Card Scheme</option>
-                        <option value="6">Pradhan Mantri Fasal Bima Yojana (PMFBY)</option>
-                        <option value="7">National Mission on Agricultural Extension & Technology (NMAET)</option>
-                        <option value="8">Kisan Credit Card Scheme (KCC)</option>
-                        <option value="9">Agro-Processing and Cold Chain Development Scheme</option>
-                        <option value="10">National Horticulture Mission</option>
+                        <option>Paramparagat Krishi Vikas Yojana (PKVY)</option>
+                        <option>National Mission on Natural Farming</option>
+                        <option>Rashtriya Krishi Vikas Yojana (RKVY)</option>
                     </select>
                 </div>
 
-                <!-- Type of KPI -->
                 <div class="mb-3">
                     <label class="form-label">Type of KPI</label>
                     <select class="form-select">
-                        <option value="0">-- Select Type of KPI --</option>
-                        <option value="output">Output</option>
-                        <option value="outcome">Outcome</option>
-                        <option value="process">Process</option>
+                        <option>Output</option>
+                        <option>Outcome</option>
+                        <option>Process</option>
                     </select>
                 </div>
 
-                <!-- Target Goal -->
                 <div class="mb-3">
-                    <label class="form-label">Target Goal (Terms)</label>
+                    <label class="form-label">Target Goal</label>
                     <select class="form-select">
-                        <option value="0">-- Select Target Goal --</option>
-                        <option value="S">Short Term (2030)</option>
-                        <option value="M">Mid Term (2035)</option>
-                        <option value="L">Long Term (2047)</option>
+                        <option>Short Term (2030)</option>
+                        <option>Mid Term (2035)</option>
+                        <option>Long Term (2047)</option>
                     </select>
                 </div>
 
-                <!-- Target Value -->
                 <div class="mb-3">
                     <label class="form-label">Target Value</label>
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control" value="50000">
                 </div>
 
-                <!-- Target Date -->
                 <div class="mb-3">
                     <label class="form-label">Target Accomplishment Date</label>
                     <input type="date" class="form-control">
                 </div>
 
-                <!-- Unit -->
                 <div class="mb-3">
                     <label class="form-label">Unit of Measurement</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" value="Hectares">
                 </div>
 
-                <!-- Data Source -->
-            <div class="mb-3">
-                <label class="form-label">Data Source Type</label><br>
-            
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="data_source_type" id="primarySource" checked>
-                    <label class="form-check-label" for="primarySource">Primary</label>
-                </div>
-            
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="data_source_type" id="secondarySource">
-                    <label class="form-check-label" for="secondarySource">Secondary</label>
-                </div>
-            </div>
-            
-            <!-- Primary Data Source -->
-            <div class="mb-3">
-                <label class="form-label">Primary Data Source</label>
-                <select class="form-select">
-                    <option value="">-- Select Primary Data Source --</option>
-                    <option>Department MIS</option>
-                    <option>Administrative Records</option>
-                </select>
-            </div>
-            
-            <!-- Secondary Data Source -->
-            <div class="mb-3">
-                <label class="form-label">Secondary Data Source</label>
-                <select class="form-select">
-                    <option value="">-- Select Secondary Data Source --</option>
-                    <option>National Sample Survey (NSS)</option>
-                    <option>Economic Survey</option>
-                    <option>Agriculture Census</option>
-                    <option>DES Statistics</option>
-                    <option>Remote Sensing / Satellite Data</option>
-                </select>
-            </div>
-
-
-                <!-- Numerator -->
                 <div class="mb-3">
-                    <label class="form-label">Numerator</label>
-                    <input type="text" class="form-control">
+                    <label class="form-label">Data Source Type</label><br>
+                    <input type="radio" name="ds" checked> Primary &nbsp;
+                    <input type="radio" name="ds"> Secondary
                 </div>
 
-                <!-- Denominator -->
                 <div class="mb-3">
-                    <label class="form-label">Denominator</label>
-                    <input type="text" class="form-control">
-                </div>
-
-                <!-- Level -->
-                <div class="mb-3">
-                    <label class="form-label">Level</label>
-                    <select class="form-select" required>
-                        <option value="">Select Level</option>
-                        <option value="district">District</option>
-                        <option value="block">Block</option>
-                        <option value="control">Control</option>
+                    <label class="form-label">Primary Data Source</label>
+                    <select class="form-select">
+                        <option>Department MIS</option>
+                        <option>Administrative Records</option>
                     </select>
                 </div>
 
-                <!-- Allied Department -->
+                <div class="mb-3">
+                    <label class="form-label">Secondary Data Source</label>
+                    <select class="form-select">
+                        <option>Agriculture Census</option>
+                        <option>DES Statistics</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Numerator</label>
+                    <input type="text" class="form-control" placeholder="Area under natural farming">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Denominator</label>
+                    <input type="text" class="form-control" placeholder="Total cultivable area">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Level</label>
+                    <select class="form-select">
+                        <option>District</option>
+                        <option>Block</option>
+                        <option>Control</option>
+                    </select>
+                </div>
+
                 <div class="mb-3">
                     <label class="form-label">Allied Department</label>
                     <select class="form-select" multiple>
-                        <option disabled>-- Allied Department --</option>
-                        <option value="1">Department of Agriculture & Farmers' Welfare</option>
-                        <option value="2">Department of Horticulture</option>
-                        <option value="3">Department of Animal Husbandry & Dairying</option>
-                        <option value="4">Department of Fisheries</option>
-                        <option value="5">Department of Rural Development</option>
-                        <option value="6">Department of Food & Public Distribution</option>
-                        <option value="7">Department of Soil & Water Conservation</option>
-                        <option value="8">Department of Cooperative Societies</option>
-                        <option value="100">Other</option>
+                        <option>Department of Agriculture</option>
+                        <option>Department of Rural Development</option>
+                        <option>Department of Environment</option>
+                        <option>Other</option>
                     </select>
                 </div>
 
-                <!-- Other Department -->
                 <div class="mb-3">
                     <label class="form-label">Other Department</label>
-                    <input type="text" class="form-control" placeholder="Other Department">
+                    <input type="text" class="form-control">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Reporting Period</label>
                     <select class="form-select">
-                        <option value="">-- Select Period --</option>                        
                         <option>Quarterly</option>
                         <option>Half Yearly</option>
                         <option>Yearly</option>
                     </select>
                 </div>
 
-                <!-- Buttons -->
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-secondary">Save</button>&nbsp;
-                    <button type="button" class="btn btn-secondary">Update</button>&nbsp;
-                    <button type="reset" class="btn btn-warning">Reset</button>&nbsp;
+                    <button type="submit" class="btn btn-secondary">Save</button>
+                    <button type="button" class="btn btn-secondary">Update</button>
+                    <button type="reset" class="btn btn-warning">Reset</button>
                 </div>
+
             </div>
 
-            <!-- Right Column: Suggestive KPIs -->
+            <!-- RIGHT COLUMN -->
             <div class="col-md-4">
+
                 <h4>Suggestive KPIs</h4>
-                <table class="table table-bordered table-sm" id="datatable">
-                    <thead>
-                        <tr>
-                            <th>Suggestive KPI</th>
-                            <th>KPI Type</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Total Agricultural Production</td>
-                            <td>Output</td>
-                        </tr>
-                        <tr>
-                            <td>Food Processing Output</td>
-                            <td>Outcome</td>
-                        </tr>
-                    </tbody>
+                <table class="table table-bordered table-sm">
+                    <tr>
+                        <th>KPI</th>
+                        <th>Type</th>
+                    </tr>
+                    <tr>
+                        <td>Area Covered Under Natural Farming (ha)</td>
+                        <td>Output</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Farmers Covered Under Natural Farming</td>
+                        <td>Outcome</td>
+                    </tr>
                 </table>
 
                 <h4>SDG Suggestive KPIs</h4>
-                <table class="table table-bordered table-sm" id="datatable">
-                    <thead>
-                        <tr>
-                            <th>SDG KPI</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="#">SDG 2.3: Increase agricultural productivity and incomes of small-scale food
-                                    producers</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">SDG 2.4: Ensure sustainable food production systems and implement resilient
-                                    agricultural practices</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">SDG 12.3: Reduce food loss along production and supply chains</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">SDG 15.3: Combat desertification, restore degraded land and soil</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">SDG 2.5: Maintain the genetic diversity of seeds, cultivated plants, and
-                                    farmed animals</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">SDG 15.1: Conserve and restore terrestrial and inland freshwater
-                                    ecosystems</a></td>
-                        </tr>
-                    </tbody>
+                <table class="table table-bordered table-sm">
+                    <tr>
+                        <th>SDG KPI</th>
+                    </tr>
+                    <tr>
+                        <td>SDG 2.3: Increase agricultural productivity and incomes of small-scale food producers</td>
+                    </tr>
+                    <tr>
+                        <td>SDG 2.4: Ensure sustainable food production systems and implement resilient agricultural practices</td>
+                    </tr>
+                    <tr>
+                        <td>SDG 12.3: Reduce food loss along production and supply chains</td>
+                    </tr>
+                    <tr>
+                        <td>SDG 15.3: Combat desertification, restore degraded land and soil</td>
+                    </tr>
+                    <tr>
+                        <td>SDG 2.5: Maintain the genetic diversity of seeds, cultivated plants, and farmed animals</td>
+                    </tr>
+                    <tr>
+                        <td>SDG 15.1: Conserve and restore terrestrial and inland freshwater ecosystems</td>
+                    </tr>
                 </table>
+
             </div>
         </div>
     </form>
 
-    <!-- KPI Table -->
-    <div class="row mt-3">
-        <div class="col-md-12">
-            <h4>KPI Table</h4>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped" id="datatable">
-                    <thead class="table-primary">
-                        <tr>
-                            <th>S.No.</th>
-                            <th>KPI</th>
-                            <th>Type of KPI</th>
-                            <th>Target Goal</th>
-                            <th>Target Value</th>
-                            <th>Target Accomplishment Date</th>
-                            <th>Unit</th>
-                            <th>Data Source</th>
-                            <th>Numerator</th>
-                            <th>Denominator</th>
-                            <th>Allied Department</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Total Agricultural Production</td>
-                            <td>Output</td>
-                            <td>Short Term (2030)</td>
-                            <td>120</td>
-                            <td>31-12-2030</td>
-                            <td>Million Tonnes</td>
-                            <td>Dept Records</td>
-                            <td>100</td>
-                            <td>120</td>
-                            <td>Department of Agriculture</td>
-                            <td>
-                                <button class="btn btn-sm btn-primary">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
 </div>
+
+</body>
+</html>

@@ -42,7 +42,7 @@ const routes: Routes = [
     component: GuidelinesComponent
   },
   {
-    path: 'themedetails',
+    path: 'themedetails/:themeid',
     component: ThemedetailsComponent
   },
   {

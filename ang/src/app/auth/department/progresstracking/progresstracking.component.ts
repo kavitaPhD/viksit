@@ -109,9 +109,6 @@ export class ProgresstrackingComponent implements OnInit
   }
 
 
-
-
-
   onSubmit(){}
 
 }
